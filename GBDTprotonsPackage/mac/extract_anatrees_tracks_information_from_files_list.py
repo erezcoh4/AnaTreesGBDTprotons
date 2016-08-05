@@ -14,7 +14,7 @@ Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else
 ListsPath = Path+"/lists"
 AnaPath = Path+"/BDTanaFiles"
 CSVFilesPath = Path+"/CSVOutFiles"
-ListName = "extBNB_AnalysisTrees"#"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees"
+ListName = "openCOSMIC_MC_AnalysisTrees"#"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" # openCOSMIC_MC_AnalysisTrees
 
 tools = AnaTreeTools()
 
