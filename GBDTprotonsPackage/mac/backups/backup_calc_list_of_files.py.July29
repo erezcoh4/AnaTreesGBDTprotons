@@ -1,0 +1,139 @@
+# imports
+import ROOT , os , sys, larlite, argparse
+from ROOT import *
+from ROOT import calcAnaTree
+from ROOT import AnaTreeTools
+
+
+# input flags...
+parser = argparse.ArgumentParser()
+parser.add_argument('-v','--verbose', default='1', type=int , help='\n0 - quiet,\n1 - major functionality,\n2 - print out all sorts of shit')
+parser.add_argument('-p','--print_mod', default='1000', type=int , help='print every how many entries')
+parser.add_argument('-evf','--ev_frac', default='0.01', type=float , help='fraction of events to process from each analysis tree')
+parser.add_argument('--worker', default='erez', type=str )
+debug = parser.parse_args().verbose
+print_every_entry = parser.parse_args().print_mod
+evts_fraction = parser.parse_args().ev_frac
+worker = parser.parse_args().worker
+if debug>0: print "flags: ", parser.parse_args()
+
+
+Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna" 
+
+
+ListsPath = Path+"/lists"
+AnaPath = Path+"/BDTanaFiles"
+CSVFilesPath = Path+"/CSVOutFiles"
+ListName = "extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" | "example_list_of_extBNB" | "example_list_of_mcc7_anatrees_uboone"
+
+tools = AnaTreeTools()
+
+
+if debug>0: print "\nreading list of files..."
+with open(ListsPath + "/" + ListName + ".list") as f:
+    files = f.read().splitlines()
+if debug>1: print files
+
+c = calcAnaTree()
+CSVfile = open(CSVFilesPath+"/"+"features_"+ListName+".csv", "wb")
+CSVfile.write(str(c.GetCSVoutHeader()) + "\n")
+
+in_chain = ROOT.TChain("analysistree/anatree");
+
+for i in range(len(files)):
+    if debug>1: print "file %d size is %f MB"%(i,float(os.path.getsize(files[i])/1048576))
+    if float(os.path.getsize(files[i])/1048576) > 0.1 :
+        in_chain.Add(files[i])
+if debug>0: print "input chain entries: ", in_chain.GetEntries()
+
+#
+#Nentries = in_chain.GetEntries()
+#
+#
+#OutFile = ROOT.TFile(AnaPath + "/"+"BDTana_" + ListName + ".root","recreate")
+#OutTree = ROOT.TTree("GBDTTree","physical variables taken from pandoraNu tracking algorithm")
+#
+#
+#if debug>1: print in_chain,OutTree,debug
+#    
+#calc = calcAnaTree( in_chain , OutTree , debug )
+#for entry in range(int(evts_fraction*(Nentries))):
+#        
+#    calc.get_bdt_tools( entry )
+#        
+#        
+#    if calc.ntracks_pandoraNu>0:
+#        
+#            if (entry%print_every_entry == 1):
+#                calc.PrintData( entry )
+#            
+#            for feature in calc.GetCSVdata():
+#                CSVfile.write(str(feature) + ",")
+#            
+#    CSVfile.write("\n")
+#
+#
+#    
+#if debug>0: print "extracted %d events\nout-tree has %d events\n\n" % (int(evts_fraction*(Nentries)),OutTree.GetEntries())
+#
+#OutTree.Write()
+#OutFile.Close()
+#
+#
+#print "csv file " + CSVfile.name + " (%.2f MB)"%float(os.path.getsize(CSVfile.name)/1048576)
+#print "root file " + AnaPath + "/"+"BDTana_" + ListName + ".root" + " (%.2f MB)"%float(os.path.getsize(AnaPath+"/"+"BDTana_"+ListName+ ".root")/1048576)
+#
+#
+#
+#
+
+# old script... delete by Aug-10....
+#
+#OutFile = ROOT.TFile(AnaPath + "/"+"BDTana_" + ListName + ".root","recreate")
+#OutTree = ROOT.TTree("GBDTTree","physical variables taken from pandoraNu tracking algorithm")
+#OutTree.Write()
+#OutFile.Close()
+
+#
+#
+#
+#for i in range(len(files)):
+#    
+#    in_file = ROOT.TFile(files[i])
+#    in_tree = in_file.Get("analysistree/anatree")
+#    out_file = ROOT.TFile(AnaPath + "/"+"BDTana_" + ListName + ".root","update")
+#    out_tree = out_file.Get("GBDTTree")
+#    
+#    if debug>1: print in_tree,out_tree,debug
+#
+#    calc = calcAnaTree( in_tree , out_tree , debug )
+#    for entry in range(int(evts_fraction*(calc.Nentries))):
+#
+#        calc.get_bdt_tools( entry )
+#    
+#
+#        if calc.ntracks_pandoraNu>0:
+#
+#
+#            if (entry%print_every_entry == 1):
+#                calc.PrintData( entry )
+#
+#            for feature in calc.GetCSVdata():
+#                CSVfile.write(str(feature) + ",")
+#        
+#            CSVfile.write("\n")
+#
+#    calc.releaseAddresses()
+#
+#
+#    if debug>0: print "extracted %d events from %s\nout_tree has %d events\n---------------------" % (int(evts_fraction*(calc.Nentries)),files[i],out_tree.GetEntries())
+#    out_tree.Write()
+#    out_file.Close()
+#    in_file.Close()
+#
+#
+#print "wrote csv file " + CSVfile.name + ", with size of %.2f MB"%float(os.path.getsize(CSVfile.name)/(1024*1024.0))
+#print "wrote root file " + AnaPath + "/"+"BDTana_" + ListName + ".root" + ", with size of %.2f MB"%float(os.path.getsize(AnaPath+"/"+"BDTana_"+ListName+ ".root")/(1024*1024.0))
+#
+#
+#
