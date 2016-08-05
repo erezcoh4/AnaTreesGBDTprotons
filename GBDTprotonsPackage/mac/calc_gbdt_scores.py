@@ -1,7 +1,7 @@
 # take csv data and predict proton scores
 
 import ROOT ,os, sys , math
-sys.path.insert(0, "python_gbdt")
+sys.path.insert(0, "/Users/erezcohen/larlite/UserDev/protonid")
 import gbdt_classification as gbdt
 import input_flags
 import matplotlib.pyplot as plt
@@ -28,8 +28,8 @@ PassedGBDTFileName = Path+"/PassedGBDTFiles" + "/" +ListName + "/" + "passedGBDT
 if debug>0: print "loading data from %s"%inputCSVFileName
 data = pd.read_csv(inputCSVFileName)
 if debug>0: print "loaded %d tracks"%len(data)
-
 data_scores = predict_cosmic.predict_data( data )
+if debug>0: print "predicted to %d tracks"%len(data)
 
 
 # now dump the run and event number to csv to use as input to larsoft filter
