@@ -23,7 +23,8 @@ avg_dqdx(-100),
 pidpida(-100),
 pidchi(-100),
 cosmicscore(-100),
-coscontscore(-100)
+coscontscore(-100),
+MCpdgCode(-100)
 {}
 
 

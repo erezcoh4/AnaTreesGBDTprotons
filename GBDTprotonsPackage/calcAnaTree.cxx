@@ -19,11 +19,12 @@ bool calcAnaTree::get_bdt_tools (int entry){ // main event loop....
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-calcAnaTree::calcAnaTree( TTree * fInTree, TTree * fOutTree, TString fCSVFileName, int fdebug){
+calcAnaTree::calcAnaTree( TTree * fInTree, TTree * fOutTree, TString fCSVFileName, int fdebug, bool fMCmode){
     
     SetInTree(fInTree);
     SetOutTree(fOutTree);
     SetDebug(fdebug);
+    SetMCMode(fMCmode);
     SetCSVFileName (fCSVFileName);
     InitInputTree();
     InitOutputTree();
@@ -40,7 +41,6 @@ void calcAnaTree::InitInputTree(){
 
     InTree -> SetBranchAddress("ntracks_pandoraNu"                              , &ntracks_pandoraNu);
     InTree -> SetBranchAddress("trkId_pandoraNu"                                , &trkId_pandoraNu);
-    InTree -> SetBranchAddress("trkg4id_pandoraNu"                              , &trkg4id_pandoraNu);
     InTree -> SetBranchAddress("trklen_pandoraNu"                               , &trklen_pandoraNu);
     InTree -> SetBranchAddress("trkstartx_pandoraNu"                            , &trkstartx_pandoraNu);
     InTree -> SetBranchAddress("trkstarty_pandoraNu"                            , &trkstarty_pandoraNu);
@@ -79,6 +79,13 @@ void calcAnaTree::InitInputTree(){
     InTree -> SetBranchAddress("flash_zcenter"                                  , &flash_zcenter);
     InTree -> SetBranchAddress("flash_zwidth"                                   , &flash_zwidth);
     
+    if (MCmode) {
+        
+        InTree -> SetBranchAddress("geant_list_size"                            , &geant_list_size);
+        InTree -> SetBranchAddress("trkg4id_pandoraNu"                          , &trkg4id_pandoraNu);
+        InTree -> SetBranchAddress("truth_pdg"                                  , &truth_pdg);
+        
+    }
     
     Nentries = InTree -> GetEntries();
     if(debug>1) cout << "calcAnaTree input-tree ready (" << InTree -> GetName() <<"), " <<  Nentries << " entries" << endl;
@@ -117,6 +124,7 @@ void calcAnaTree::InitOutputCSV(){
     +TString(",cosmicscore,coscontscore,pidpida,pidchi")
     +TString(",cftime,cftimewidth,cfzcenter,cfzwidth")
     +TString(",cfycenter,cfywidth,cftotalpe,cfdistance")
+    +TString(",MCpdgCode")
     +TString(",U_start_wire,U_start_time,U_end_wire,U_end_time")
     +TString(",V_start_wire,V_start_time,V_end_wire,V_end_time")
     +TString(",Y_start_wire,Y_start_time,Y_end_wire,Y_end_time");
@@ -286,6 +294,30 @@ void calcAnaTree::LoopPanNuTracks(){
         if(debug>3) Printf("calculated the Straightness of the track ...");
         cTrack.Momentum();
         if(debug>3) Printf("calculated the Momentum of the track ...");
+        
+        // if its MC, plug also MC information
+        if(MCmode){
+            if(debug>3) Printf("plugging also MC information:");
+            
+            for(Int_t ig4=0; ig4 < geant_list_size; ig4++) {
+                if(trkg4id_pandoraNu[ig4] == cTrack.track_id){
+                    // lets start with only the MC pdg code, for training purposes
+                    if(debug>3) Printf("truth pdg is: %d",truth_pdg[ig4]);
+                    cTrack.SetMCpdgCode(truth_pdg[ig4]);
+                }
+                else{
+                    if(debug>3) Printf("could not find g4 information for this track");
+                    cTrack.SetMCpdgCode(-9999);
+                }
+            }
+        }
+        else {
+            if(debug>3) Printf("this is data, so no MC information");
+            cTrack.SetMCpdgCode(-9999);
+        }
+
+        
+        
         tracks.push_back(cTrack);
         if(debug>3) Printf("pushed the track into tracks which now has a size %lu...",tracks.size());
     }
@@ -330,6 +362,7 @@ void calcAnaTree::WriteTracks2CSV(){
     // cosmicscore      , coscontscore      , pidpida       , pidchi
     // cftime           , cftimewidth       , cfzcenter     , cfzwidth
     // cfycenter        , cfywidth          , cftotalpe     , cfdistance
+    // MCpdgCode
     // U_start_wire     , U_start_time      , U_end_wire  , U_end_time
     // V_start_wire     , V_start_time      , V_end_wire  , V_end_time
     // Y_start_wire     , Y_start_time      , Y_end_wire  , Y_end_time
@@ -347,6 +380,7 @@ void calcAnaTree::WriteTracks2CSV(){
                 << "," << t.cosmicscore        << "," << t.coscontscore       << "," << t.pidpida            << "," << t.pidchi
                 << "," << t.cftime             << "," << t.cftimewidth        << "," << t.cfzcenter          << "," << t.cfzwidth
                 << "," << t.cfycenter          << "," << t.cfywidth           << "," << t.cftotalpe          << "," << t.cfdistance
+                << "," << t.MCpdgCode
                 << "," << t.roi[0].start_wire  << "," << t.roi[0].start_time  << "," << t.roi[0].end_wire    << "," << t.roi[0].end_time
                 << "," << t.roi[1].start_wire  << "," << t.roi[1].start_time  << "," << t.roi[1].end_wire    << "," << t.roi[1].end_time
                 << "," << t.roi[2].start_wire  << "," << t.roi[2].start_time  << "," << t.roi[2].end_wire    << "," << t.roi[2].end_time

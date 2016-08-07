@@ -104,7 +104,7 @@ public:
     void          Set_nhits (Int_t n)       {nhits = n;};
     void       SetCosScores (Float_t fcscore, Float_t fccscore) {cosmicscore = fcscore; coscontscore = fccscore;};
     void       Set_pid_info (Float_t fpida, Float_t fchi)       {pidpida = fpida; pidchi = fchi;};
-    
+    void       SetMCpdgCode (Int_t _mcpdg)  {MCpdgCode = _mcpdg;};
     void           Set_dqdx (Float_t, Float_t, Float_t, Int_t);
     void       SetFlashInfo (Float_t fcftime, Float_t fcftimewidth, Float_t fcfzcenter, Float_t fcfzwidth, Float_t fcfycenter, Float_t fcfywidth, Float_t fcftotalpe, Float_t fcfdistance);
     
@@ -119,12 +119,12 @@ public:
     Float_t          GetPhi (){return phi;};
     
     
+    Int_t       MCpdgCode   ;
     Int_t       run         , subrun    , event;
     Int_t       nhits       , is_flipped;
     Short_t     track_id;
     
     TVector3    start_pos   , end_pos   ;
-    
     
     Float_t     length      , theta     , phi , distlenratio , momentum;
     Float_t     start_dqdx  , end_dqdx  , tot_dqdx , avg_dqdx;

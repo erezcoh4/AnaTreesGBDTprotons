@@ -35,8 +35,8 @@ public:
     ~calcAnaTree(){csvfile.close();}
     
     // construct w/ input and output TTree-s
-    calcAnaTree (TTree * fInTree, TTree * fOutTree, TString fCSVFileName, int fdebug=0);
-    calcAnaTree (TChain * fInChain, TTree * fOutTree, TString fCSVFileName, int fdebug=0){calcAnaTree((TTree*) fInChain, fOutTree, fCSVFileName,fdebug);};
+    calcAnaTree (TTree * fInTree, TTree * fOutTree, TString fCSVFileName, int fdebug=0, bool fMCmode=false);
+    calcAnaTree (TChain * fInChain, TTree * fOutTree, TString fCSVFileName, int fdebug=0, bool fMCmode=false){calcAnaTree((TTree*) fInChain, fOutTree, fCSVFileName,fdebug,fMCmode);};
     
     
     
@@ -48,7 +48,7 @@ public:
     void       SetOutTree (TTree * tree)    {OutTree = tree;};
     void   SetCSVFileName (TString name)    {CSVFileName = name;};
     void         SetDebug (int _debug)      {debug = _debug;};
-    
+    void        SetMCMode (bool _mc_mode)   {MCmode = _mc_mode;};
     
     // getters
     TTree*          GetInTree (){return InTree;};
@@ -84,6 +84,7 @@ public:
     ofstream    csvfile;
 
     int         debug;  // 0 - quiet, 1 - major functionality, 2 - print out all sorts of shit
+    bool        MCmode;
     
     Short_t     trkId_pandoraNu[MAX_tracks] , ntrkhits_pandoraNu[MAX_tracks][3]   , trkncosmictags_tagger_pandoraNu[MAX_tracks];
     Short_t     trkcosmictype_tagger_pandoraNu[MAX_tracks][10]  , trkncosmictags_containmenttagger_pandoraNu[MAX_tracks];
@@ -98,6 +99,8 @@ public:
     Int_t       trkg4id_pandoraNu[MAX_tracks];
     Int_t       no_hits     , no_flashes;
     
+    // MC information
+    Int_t       geant_list_size         , truth_pdg[MAX_tracks];
     
     Float_t     startdqdx , enddqdx     , totaldqdx;
     Float_t     cftime    , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
