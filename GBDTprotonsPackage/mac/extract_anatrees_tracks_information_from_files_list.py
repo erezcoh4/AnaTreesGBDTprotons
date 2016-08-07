@@ -6,7 +6,7 @@ from ROOT import AnaTreeTools
 import input_flags
 
 flags = input_flags.get_args()
-[debug,MCmode,print_every_entry,files_fraction,evts_fraction,worker] = [flags.verbose,flage.MCmode,flags.print_mod,flags.files_frac,flags.ev_frac,flags.worker]
+[debug,MCmode,print_every_entry,files_fraction,evts_fraction,worker] = [flags.verbose,flags.MCmode,flags.print_mod,flags.files_frac,flags.ev_frac,flags.worker]
 
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
 
@@ -14,7 +14,8 @@ Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else
 ListsPath = Path+"/lists"
 AnaPath = Path+"/BDTanaFiles"
 CSVFilesPath = Path+"/CSVOutFiles"
-ListName = "openCOSMIC_MC_AnalysisTrees"#"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" # openCOSMIC_MC_AnalysisTrees
+ListName = "openCOSMIC_MC_AnalysisTrees" if MCmode==True else "extBNB_AnalysisTrees"
+#"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" # openCOSMIC_MC_AnalysisTrees
 
 tools = AnaTreeTools()
 
