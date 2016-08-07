@@ -17,7 +17,7 @@
 #include "PandoraNuTrack.h"
 #include <ostream>
 #include "TChain.h"
-#define MAX_tracks 1000
+#define MAX_tracks 5000
 #define MAX_hits 50000
 
 /**
