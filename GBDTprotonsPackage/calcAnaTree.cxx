@@ -117,9 +117,9 @@ void calcAnaTree::InitOutputCSV(){
     +TString(",cosmicscore,coscontscore,pidpida,pidchi")
     +TString(",cftime,cftimewidth,cfzcenter,cfzwidth")
     +TString(",cfycenter,cfywidth,cftotalpe,cfdistance")
-    +TString(",U_start_wire,U_end_wire,U_start_time,U_end_time")
-    +TString(",V_start_wire,V_end_wire,V_start_time,V_end_time")
-    +TString(",Y_start_wire,Y_end_wire,Y_start_time,Y_end_time");
+    +TString(",U_start_wire,U_start_time,U_end_wire,U_end_time")
+    +TString(",V_start_wire,V_start_time,V_end_wire,V_end_time")
+    +TString(",Y_start_wire,Y_start_time,Y_end_wire,Y_end_time");
 
     csvfile << CSVHeader << endl;
 }
@@ -330,9 +330,9 @@ void calcAnaTree::WriteTracks2CSV(){
     // cosmicscore      , coscontscore      , pidpida       , pidchi
     // cftime           , cftimewidth       , cfzcenter     , cfzwidth
     // cfycenter        , cfywidth          , cftotalpe     , cfdistance
-    // U_start_wire     , U_end_wire        , U_start_time  , U_end_time
-    // V_start_wire     , V_end_wire        , V_start_time  , V_end_time
-    // Y_start_wire     , Y_end_wire        , Y_start_time  , Y_end_time
+    // U_start_wire     , U_start_time      , U_end_wire  , U_end_time
+    // V_start_wire     , V_start_time      , V_end_wire  , V_end_time
+    // Y_start_wire     , Y_start_time      , Y_end_wire  , Y_end_time
 
     
     
