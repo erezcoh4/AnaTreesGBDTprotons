@@ -158,7 +158,7 @@ void calcAnaTree::GetInTimeFlashes(){
         if (!goodflashidx.empty())  goodflashidx.clear();
         if(debug>3) {SHOW(goodflashidx.size()); Printf("looping in if(no_flashes > 0) on no_flashes");}
 
-        for(int i=0; i < no_flashes; i++){
+        for(int i=0; i < no_flashes && i < MAX_hits ; i++){
             if(debug>4) {SHOW3(i,flash_time[i],flash_pe[i]);}
             if((0.0 < flash_time[i]) && (flash_time[i] < 10.0) && (6.5 < flash_pe[i])){
                 goodflashidx.push_back(i);
