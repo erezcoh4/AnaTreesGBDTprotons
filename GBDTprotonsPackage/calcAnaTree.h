@@ -96,7 +96,7 @@ public:
     Int_t       run         , subrun    , event , primary ;
     Int_t       Nentries    , entry     , nhits;
     Int_t       Ntracks     ;
-    Int_t       trkg4id_pandoraNu[MAX_tracks];
+    Int_t       trkg4id_pandoraNu[MAX_tracks]   , TrackID[MAX_tracks];
     Int_t       no_hits     , no_flashes;
     
     // MC information
