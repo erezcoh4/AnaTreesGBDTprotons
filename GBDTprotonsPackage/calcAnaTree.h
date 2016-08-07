@@ -96,11 +96,11 @@ public:
     Int_t       run         , subrun    , event , primary ;
     Int_t       Nentries    , entry     , nhits;
     Int_t       Ntracks     ;
-    Int_t       trkg4id_pandoraNu[MAX_tracks]   , TrackID[MAX_tracks];
+    Int_t       trkg4id_pandoraNu[MAX_tracks]   , TrackId[MAX_tracks];
     Int_t       no_hits     , no_flashes;
     
     // MC information
-    Int_t       geant_list_size         , truth_pdg[MAX_tracks];
+    Int_t       geant_list_size         , pdg[MAX_tracks];
     
     Float_t     startdqdx , enddqdx     , totaldqdx;
     Float_t     cftime    , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;

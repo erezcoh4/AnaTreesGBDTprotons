@@ -83,8 +83,8 @@ void calcAnaTree::InitInputTree(){
         
         InTree -> SetBranchAddress("geant_list_size"                            , &geant_list_size);
         InTree -> SetBranchAddress("trkg4id_pandoraNu"                          , &trkg4id_pandoraNu);
-        InTree -> SetBranchAddress("TrackID"                                    , &TrackID);
-        InTree -> SetBranchAddress("pdg"                                        , &truth_pdg);
+        InTree -> SetBranchAddress("TrackId"                                    , &TrackId);
+        InTree -> SetBranchAddress("pdg"                                        , &pdg);
         
     }
     
@@ -301,12 +301,12 @@ void calcAnaTree::LoopPanNuTracks(){
             if(debug>3) Printf("plugging also MC information:");
             bool FoundMCtrack = false;
             for(Int_t ig4=0; ig4 < geant_list_size; ig4++) {
-                if(debug>3) Printf("trkg4id_pandoraNu[%d] = %d, TrackID[%d] = %d",j,trkg4id_pandoraNu[j],ig4,TrackID[ig4]);
-                if(TrackID[ig4] == trkg4id_pandoraNu[j]){
+                if(debug>3) Printf("trkg4id_pandoraNu[%d] = %d, TrackId[%d] = %d",j,trkg4id_pandoraNu[j],ig4,TrackId[ig4]);
+                if(TrackId[ig4] == trkg4id_pandoraNu[j]){
                     // lets start with only the MC pdg code, for training purposes
-                    if(debug>3) Printf("truth pdg is: %d",truth_pdg[ig4]);
+                    if(debug>3) Printf("truth pdg is: %d",pdg[ig4]);
                     FoundMCtrack = true;
-                    cTrack.SetMCpdgCode(truth_pdg[ig4]);
+                    cTrack.SetMCpdgCode(pdg[ig4]);
                 }
             }
             if (!FoundMCtrack) {
