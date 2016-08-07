@@ -213,6 +213,8 @@ void PandoraNuTrack::Print(){
     SHOW(start_dqdx);
     SHOW(end_dqdx);
     SHOW(tot_dqdx);
+    SHOW(MCpdgCode);
+    SHOW3( cosmicscore, coscontscore , pidpida )
     PrintBox(roi[0]);
     PrintBox(roi[1]);
     PrintBox(roi[2]);

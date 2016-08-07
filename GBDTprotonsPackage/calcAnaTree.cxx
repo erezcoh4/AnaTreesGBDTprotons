@@ -83,7 +83,7 @@ void calcAnaTree::InitInputTree(){
         
         InTree -> SetBranchAddress("geant_list_size"                            , &geant_list_size);
         InTree -> SetBranchAddress("trkg4id_pandoraNu"                          , &trkg4id_pandoraNu);
-        InTree -> SetBranchAddress("truth_pdg"                                  , &truth_pdg);
+        InTree -> SetBranchAddress("pdg"                                        , &truth_pdg);
         
     }
     
