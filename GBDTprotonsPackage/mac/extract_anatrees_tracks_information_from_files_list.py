@@ -6,7 +6,7 @@ from ROOT import AnaTreeTools
 import input_flags
 
 flags = input_flags.get_args()
-[debug,print_every_entry,files_fraction,evts_fraction,worker] = [flags.verbose,flags.print_mod,flags.files_frac,flags.ev_frac,flags.worker]
+[debug,MCmode,print_every_entry,files_fraction,evts_fraction,worker] = [flags.verbose,flage.MCmode,flags.print_mod,flags.files_frac,flags.ev_frac,flags.worker]
 
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
 
@@ -24,10 +24,8 @@ with open(ListsPath + "/" + ListName + ".list") as f:
     files = f.read().splitlines()
 if debug>4: print files
 
-#c = calcAnaTree()
 CSVfileName = CSVFilesPath+"/"+"features_"+ListName+".csv"
 AnafileName = AnaPath + "/"+"BDTana_" + ListName + ".root"
-#CSVfile.write(str(c.GetCSVoutHeader()) + "\n")
 
 in_chain = ROOT.TChain("analysistree/anatree");
 
@@ -47,7 +45,7 @@ OutTree = ROOT.TTree("GBDTTree","physical variables taken from pandoraNu trackin
 
 if debug>1: print in_chain,OutTree,debug
     
-calc = calcAnaTree( in_chain , OutTree , CSVfileName , debug )
+calc = calcAnaTree( in_chain , OutTree , CSVfileName , debug , MCmode )
 
 counter = 0
 for entry in range(int(evts_fraction*(Nentries))):

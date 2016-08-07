@@ -8,6 +8,7 @@ def get_args():
     parser.add_argument('-ff','--files_frac', default='0.01', type=float , help='fraction of files to process')
     parser.add_argument('-evf','--ev_frac', default='0.01', type=float , help='fraction of events to process')
     parser.add_argument('-w','--worker', default='erez', type=str )
+    parser.add_argument('-mc','--MCmode', default='False', type=bool )
     
     
     debug = parser.parse_args().verbose
@@ -15,6 +16,7 @@ def get_args():
     files_frac = parser.parse_args().files_frac
     ev_frac = parser.parse_args().ev_frac
     worker = parser.parse_args().worker
+    MCmode = parser.parse_args().MCmode
     
     if debug>0: print "flags: ", parser.parse_args()
     
