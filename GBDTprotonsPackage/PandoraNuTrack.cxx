@@ -7,6 +7,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 PandoraNuTrack::PandoraNuTrack():
+MCpdgCode(-100),
 run(-100),
 subrun(-100),
 event(-100),
@@ -23,8 +24,7 @@ avg_dqdx(-100),
 pidpida(-100),
 pidchi(-100),
 cosmicscore(-100),
-coscontscore(-100),
-MCpdgCode(-100)
+coscontscore(-100)
 {}
 
 

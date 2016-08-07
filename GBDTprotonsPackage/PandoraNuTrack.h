@@ -130,7 +130,7 @@ public:
     Float_t     start_dqdx  , end_dqdx  , tot_dqdx , avg_dqdx;
     Float_t     dqdx_diff   , dqdx_ratio;
     Float_t     pidpida     ,  pidchi   , cosmicscore   , coscontscore;
-    Float_t     cftime    , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
+    Float_t     cftime      , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
     
     box         roi[3];
 };

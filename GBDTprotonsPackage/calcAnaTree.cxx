@@ -53,7 +53,7 @@ void calcAnaTree::InitInputTree(){
     InTree -> SetBranchAddress("ntrkhits_pandoraNu"                             , &ntrkhits_pandoraNu);
     InTree -> SetBranchAddress("trkdqdx_pandoraNu"                              , &trkdqdx_pandoraNu);
     InTree -> SetBranchAddress("trkresrg_pandoraNu"                             , &trkresrg_pandoraNu);
-    InTree -> SetBranchAddress("trkxyz_pandoraNu"                               , &trkxyz_pandoraNu);
+    //    InTree -> SetBranchAddress("trkxyz_pandoraNu"                               , &trkxyz_pandoraNu); // unused - delete
     InTree -> SetBranchAddress("trkncosmictags_tagger_pandoraNu"                , &trkncosmictags_tagger_pandoraNu);
     InTree -> SetBranchAddress("trkcosmicscore_tagger_pandoraNu"                , &trkcosmicscore_tagger_pandoraNu);
     InTree -> SetBranchAddress("trkcosmictype_tagger_pandoraNu"                 , &trkcosmictype_tagger_pandoraNu);
@@ -66,7 +66,7 @@ void calcAnaTree::InitInputTree(){
     InTree -> SetBranchAddress("no_hits"                                        , &no_hits);
     InTree -> SetBranchAddress("hit_plane"                                      , &hit_plane);
     InTree -> SetBranchAddress("hit_wire"                                       , &hit_wire);
-    InTree -> SetBranchAddress("hit_peakT"                                      , &hit_peakT);
+    //    InTree -> SetBranchAddress("hit_peakT"                                      , &hit_peakT); // unused - delete
     InTree -> SetBranchAddress("hit_trkid"                                      , &hit_trkid);
     InTree -> SetBranchAddress("hit_trkKey"                                     , &hit_trkKey);
 

@@ -86,10 +86,10 @@ public:
     int         debug;  // 0 - quiet, 1 - major functionality, 2 - print out all sorts of shit
     bool        MCmode;
     
-    Short_t     trkId_pandoraNu[MAX_tracks] , ntrkhits_pandoraNu[MAX_tracks][3]   , trkncosmictags_tagger_pandoraNu[MAX_tracks];
-    Short_t     trkcosmictype_tagger_pandoraNu[MAX_tracks][10]  , trkncosmictags_containmenttagger_pandoraNu[MAX_tracks];
-    Short_t     trkcosmictype_containmenttagger_pandoraNu[MAX_tracks][10]   , trkpidbestplane_pandoraNu[MAX_tracks];
-    Short_t     hit_trkid[MAX_hits] , hit_trkKey[MAX_hits]  , hit_plane[MAX_hits]   , hit_wire[MAX_hits];
+    Short_t     trkId_pandoraNu[MAX_tracks] , ntrkhits_pandoraNu[MAX_tracks][3]     , trkncosmictags_tagger_pandoraNu[MAX_tracks];
+    Short_t     trkcosmictype_tagger_pandoraNu[MAX_tracks][10]  ; //, trkncosmictags_containmenttagger_pandoraNu[MAX_tracks]; DELETE!
+    Short_t     trkcosmictype_containmenttagger_pandoraNu[MAX_tracks][10]           , trkpidbestplane_pandoraNu[MAX_tracks];
+    Short_t     hit_trkid[MAX_hits]         , hit_trkKey[MAX_hits]                  , hit_plane[MAX_hits]       , hit_wire[MAX_hits];
     Short_t     ntracks_pandoraNu;
     
     
@@ -104,14 +104,15 @@ public:
     
     Float_t     startdqdx , enddqdx     , totaldqdx;
     Float_t     cftime    , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
-    Float_t     trklen_pandoraNu[MAX_tracks], trkstartx_pandoraNu[MAX_tracks]   , trkstarty_pandoraNu[MAX_tracks];
+    Float_t     trklen_pandoraNu[MAX_tracks]    , trkstartx_pandoraNu[MAX_tracks]   , trkstarty_pandoraNu[MAX_tracks];
     Float_t     trkstartz_pandoraNu[MAX_tracks] , trkendx_pandoraNu[MAX_tracks] , trkendy_pandoraNu[MAX_tracks];
     Float_t     trkendz_pandoraNu[MAX_tracks]   , trktheta_pandoraNu[MAX_tracks], trkphi_pandoraNu[MAX_tracks];
-    Float_t     trkdqdx_pandoraNu[MAX_tracks][3][MAX_hits]  , trkresrg_pandoraNu[MAX_tracks][3][MAX_hits] ;
-    Float_t     trkxyz_pandoraNu[MAX_tracks][3][MAX_hits][3];
+    Float_t     trkdqdx_pandoraNu[MAX_tracks][3][MAX_hits]                      , trkresrg_pandoraNu[MAX_tracks][3][MAX_hits] ;
+    //    Float_t     trkxyz_pandoraNu[MAX_tracks][3][MAX_hits][3]; // unused - delete
     Float_t     trkcosmicscore_tagger_pandoraNu[MAX_tracks][10] , trkcosmicscore_containmenttagger_pandoraNu[MAX_tracks][10];
     Float_t     trkpidchi_pandoraNu[MAX_tracks][3]  , trkpidpida_pandoraNu[MAX_tracks][3]   , flash_time[MAX_hits]  , flash_timewidth[MAX_hits] , flash_pe[MAX_hits];
-    Float_t     hit_peakT[MAX_hits]     , flash_ycenter[MAX_hits]   , flash_ywidth[MAX_hits]    , flash_zcenter[MAX_hits]   , flash_zwidth[MAX_hits];
+    //    Float_t     hit_peakT[MAX_hits]     ; // unused - delete
+    Float_t     flash_ycenter[MAX_hits]   , flash_ywidth[MAX_hits]    , flash_zcenter[MAX_hits]   , flash_zwidth[MAX_hits];
     
     
   
