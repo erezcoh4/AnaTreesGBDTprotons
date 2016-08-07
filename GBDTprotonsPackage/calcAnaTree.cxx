@@ -298,17 +298,19 @@ void calcAnaTree::LoopPanNuTracks(){
         // if its MC, plug also MC information
         if(MCmode){
             if(debug>3) Printf("plugging also MC information:");
-            
+            bool FoundMCtrack = false;
             for(Int_t ig4=0; ig4 < geant_list_size; ig4++) {
+                if(debug>3) Printf("truth_pdg[%d] = %d",ig4,truth_pdg[ig4]);
                 if(trkg4id_pandoraNu[ig4] == cTrack.track_id){
                     // lets start with only the MC pdg code, for training purposes
                     if(debug>3) Printf("truth pdg is: %d",truth_pdg[ig4]);
+                    FoundMCtrack = true;
                     cTrack.SetMCpdgCode(truth_pdg[ig4]);
                 }
-                else{
-                    if(debug>3) Printf("could not find g4 information for this track");
-                    cTrack.SetMCpdgCode(-9999);
-                }
+            }
+            if (!FoundMCtrack) {
+                if(debug>3) Printf("could not find g4 information for this track");
+                cTrack.SetMCpdgCode(-9999);
             }
         }
         else {
