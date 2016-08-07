@@ -301,7 +301,7 @@ void calcAnaTree::LoopPanNuTracks(){
             if(debug>3) Printf("plugging also MC information:");
             bool FoundMCtrack = false;
             for(Int_t ig4=0; ig4 < geant_list_size; ig4++) {
-                if(debug>3) Printf("cTrack.track_id = %d, trkg4id_pandoraNu[%d] = %d, TrackID[%d] = %d, truth_pdg[%d] = %d",cTrack.track_id,j,trkg4id_pandoraNu[j],ig4,TrackID[ig4],ig4,truth_pdg[ig4]);
+                if(debug>3) Printf("trkg4id_pandoraNu[%d] = %d, TrackID[%d] = %d",j,trkg4id_pandoraNu[j],ig4,TrackID[ig4]);
                 if(TrackID[ig4] == trkg4id_pandoraNu[j]){
                     // lets start with only the MC pdg code, for training purposes
                     if(debug>3) Printf("truth pdg is: %d",truth_pdg[ig4]);
