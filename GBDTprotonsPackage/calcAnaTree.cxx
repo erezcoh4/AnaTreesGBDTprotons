@@ -359,8 +359,8 @@ void calcAnaTree::GetCloseTracks(){
                     t1.AddNeighborTrack( t2.track_id , ClosestDistance , angle );
                     
                     if (debug > 2)
-                        Printf("plugged track %d into %d neighbors, with distance %.2f cm, and angle %.2f deg."
-                               ,t2.track_id,t1.NeighborTracks.back() , ClosestDistance , angle);
+                        Printf("plugged track %d into %d's neighbors, with distance %.2f cm, and angle %.2f deg."
+                               ,t2.track_id , t1.track_id , ClosestDistance , ClosestDistance , angle);
                 }
             }
         }

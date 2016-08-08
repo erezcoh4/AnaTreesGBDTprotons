@@ -206,6 +206,18 @@ void PandoraNuTrack::AddNeighborTrack( Int_t ftrack_id , Float_t fClosestDistanc
     NeighborTracksDistance.push_back( fClosestDistance );
 
     NeighborTracksAngles.push_back( fangle );
+    
+    cout << "\033[37m" << NNeighborTracks << " neighboring tracks" ;
+    for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
+        cout
+        << "\t track "              << NeighborTracks[i]
+        << ", distance: "           << NeighborTracksDistance[i]
+        << " cm, relative angle:"   << NeighborTracksAngles[i]
+        << " deg.\n";
+    }
+    cout << "\033[0m" << endl;
+    
+
 }
 
 
@@ -235,7 +247,7 @@ void PandoraNuTrack::Print(){
     cout << "\033[37m" << NNeighborTracks << " neighboring tracks" ;
     for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
         cout
-        << "\t track "                 << NeighborTracks[i]
+        << "\t track "              << NeighborTracks[i]
         << ", distance: "           << NeighborTracksDistance[i]
         << " cm, relative angle:"   << NeighborTracksAngles[i]
         << " deg.\n";
