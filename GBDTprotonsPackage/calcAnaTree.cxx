@@ -343,12 +343,14 @@ void calcAnaTree::GetCloseTracks(){
                 Float_t StartPointLineDistacne  = PointLineDistacne( t1.start_pos , t1.end_pos , t2.start_pos );
                 
                 Float_t EndPointLineDistacne    = PointLineDistacne( t1.start_pos , t1.end_pos , t2.end_pos   );
-                
-                if (debug > 3)
-                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm"
-                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne);
-                
+
                 Float_t ClosestDistance = std::min(StartPointLineDistacne , EndPointLineDistacne);
+
+                
+                if (debug > 2)
+                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm (closest %.1f cm )"
+                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne,ClosestDistance);
+                
                 
                 if ( ClosestDistance < TracsMinDistance ) {
                     
@@ -373,7 +375,6 @@ Float_t calcAnaTree::PointLineDistacne(TVector3 x1 , TVector3 x2 , TVector3 x0){
     //[http://mathworld.wolfram.com/Point-LineDistance3-Dimensional.html]
     
     Float_t d = ( ( x0 - x1 ).Cross( x0 - x2 ) ).Mag() / ( x2 - x1 ).Mag();
-    if (debug>2) SHOW(d);
     return d;
         
     
