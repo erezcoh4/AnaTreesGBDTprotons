@@ -67,6 +67,10 @@ public:
     bool    get_bdt_tools (int);
     void GetInTimeFlashes ();
     void  LoopPanNuTracks ();
+    void   GetCloseTracks ();
+
+    // helpers
+    Float_t PointLineDistacne(TVector3, TVector3 , TVector3);
     bool   TrackContained (Int_t);
     void        PrintData (int);
     void releaseAddresses (){ OutTree->SetBranchStatus("*",0); };

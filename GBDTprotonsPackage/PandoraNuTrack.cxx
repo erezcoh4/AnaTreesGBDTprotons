@@ -53,6 +53,7 @@ PandoraNuTrack::PandoraNuTrack (
     SetLength(flength);
     SetTheta(ftheta);
     SetPhi(fphi);
+    NNeighborTracks = 0;
     lar_tools = new MyLArTools();
     
     
@@ -218,7 +219,16 @@ void PandoraNuTrack::Print(){
     PrintBox(roi[0]);
     PrintBox(roi[1]);
     PrintBox(roi[2]);
-    
+    cout << "\033[37m" << NNeighborTracks << " neighboring tracks: " ;
+    for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
+        cout
+        << "track "                 << NeighborTracks[i]
+        << ", distance: "           << NeighborTracksDistance[i]
+        << " cm, relative angle:"   << NeighborTracksAngles[i]
+        << " deg.\n";
+    }
+    cout << "\033[0m" << endl;
+
 }
 
 

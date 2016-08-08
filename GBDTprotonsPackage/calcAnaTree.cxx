@@ -14,6 +14,8 @@ bool calcAnaTree::get_bdt_tools (int entry){ // main event loop....
     GetInTimeFlashes();
     LoopPanNuTracks();
     
+    GetCloseTracks();
+    
     OutTree -> Fill();
     return true;
 }
@@ -325,6 +327,59 @@ void calcAnaTree::LoopPanNuTracks(){
         if(debug>3) Printf("pushed the track into tracks which now has a size %lu...",tracks.size());
     }
 }
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+void calcAnaTree::GetCloseTracks(){
+    // look for neighboring tracks, and for the angles between these neighboring tracks
+    // intended to find fragmentation of tracks or badly-reconstructed parts of EM-showers,
+    // and eliminate them from our protons sample
+    for (auto t1 : tracks){
+        
+        for (auto t2 : tracks){
+            
+            if (t1.track_id != t2.track_id){ // don't consider the same track....
+                
+                Float_t StartPointLineDistacne  = PointLineDistacne( t1.start_pos , t1.end_pos , t2.start_pos );
+                
+                Float_t EndPointLineDistacne    = PointLineDistacne( t1.start_pos , t1.end_pos , t2.end_pos   );
+                
+                if (debug > 3)
+                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm"
+                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne);
+                
+                Float_t ClosestDistance = std::min(StartPointLineDistacne , EndPointLineDistacne);
+                
+                if ( ClosestDistance < TracsMinDistance ) {
+                    
+                    t1.NNeighborTracks++ ;
+                    t1.NeighborTracks.push_back( t2.track_id );
+                    t1.NeighborTracksDistance.push_back( ClosestDistance );
+                    
+                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
+                                                             / (t1.length * t2.length) );
+                    t1.NeighborTracksAngles.push_back( angle );
+                }
+            }
+        }
+    }
+}
+
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+Float_t calcAnaTree::PointLineDistacne(TVector3 x1 , TVector3 x2 , TVector3 x0){
+    // calculate the distance between the point x0, and the line between x1 and x2
+    //[http://mathworld.wolfram.com/Point-LineDistance3-Dimensional.html]
+    
+    Float_t d = ( ( x0 - x1 ).Cross( x0 - x2 ) ).Mag() / ( x2 - x1 ).Mag();
+    if (debug>2) SHOW(d);
+    return d;
+        
+    
+}
+
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 bool calcAnaTree::TrackContained(Int_t i){

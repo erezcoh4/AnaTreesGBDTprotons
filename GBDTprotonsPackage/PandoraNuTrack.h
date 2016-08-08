@@ -26,7 +26,7 @@
 using namespace std;
 
 #define PrintBox(box) cout << "\033[34m" << #box << ": (" << box.start_wire << "," << box.start_time << ") => (" << box.end_wire << "," << box.end_time << ")" << "\033[0m" << endl;
-
+#define TracsMinDistance 10 // [cm]
 
 struct box {
     
@@ -122,6 +122,7 @@ public:
     Int_t       MCpdgCode   ;
     Int_t       run         , subrun    , event;
     Int_t       nhits       , is_flipped;
+    Int_t       NNeighborTracks;
     Short_t     track_id;
     
     TVector3    start_pos   , end_pos   ;
@@ -133,6 +134,11 @@ public:
     Float_t     cftime      , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
     
     box         roi[3];
+    
+    // tracks which are closer than TracsMinDistance, at the same event, are labled as 'neighbor-tracks'
+    vector<Int_t>       NeighborTracks;
+    vector<Float_t>     NeighborTracksDistance;
+    vector<Float_t>     NeighborTracksAngles;
 };
 #endif
 /** @} */ // end of doxygen group
