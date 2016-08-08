@@ -334,9 +334,9 @@ void calcAnaTree::GetCloseTracks(){
     // look for neighboring tracks, and for the angles between these neighboring tracks
     // intended to find fragmentation of tracks or badly-reconstructed parts of EM-showers,
     // and eliminate them from our protons sample
-    for (auto t1 : tracks){
+    for (auto &t1 : tracks){
         
-        for (auto t2 : tracks){
+        for (auto &t2 : tracks){
             
             if (t1.track_id != t2.track_id){ // don't consider the same track....
                 
