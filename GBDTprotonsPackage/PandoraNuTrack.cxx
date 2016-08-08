@@ -219,7 +219,7 @@ void PandoraNuTrack::Print(){
     PrintBox(roi[0]);
     PrintBox(roi[1]);
     PrintBox(roi[2]);
-    cout << "\033[37m" << NNeighborTracks << " neighboring tracks: " ;
+    cout << "\033[37m" << NNeighborTracks << " neighboring tracks" << (NNeighborTracks>0) ? ":" : "";
     for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
         cout
         << "track "                 << NeighborTracks[i]
