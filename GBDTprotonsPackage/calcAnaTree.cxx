@@ -354,17 +354,13 @@ void calcAnaTree::GetCloseTracks(){
                 
                 if ( ClosestDistance < TracsMinDistance ) {
                     
-                    t1.NNeighborTracks++ ;
-                    t1.NeighborTracks.push_back( t2.track_id );
-                    t1.NeighborTracksDistance.push_back( ClosestDistance );
-                    
                     Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
                                                              / (t1.length * t2.length) );
-                    t1.NeighborTracksAngles.push_back( angle );
+                    t1.AddNeighborTrack( t2.track_id , ClosestDistance , angle );
                     
                     if (debug > 2)
                         Printf("plugged track %d into %d neighbors, with distance %.2f cm, and angle %.2f deg."
-                               ,t2.track_id,t1.NeighborTracks.back(),t1.NeighborTracksDistance.back(),t1.NeighborTracksAngles.back());
+                               ,t2.track_id,t1.NeighborTracks.back() , ClosestDistance , angle);
                 }
             }
         }

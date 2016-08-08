@@ -108,7 +108,8 @@ public:
     void           Set_dqdx (Float_t, Float_t, Float_t, Int_t);
     void       SetFlashInfo (Float_t fcftime, Float_t fcftimewidth, Float_t fcfzcenter, Float_t fcfzwidth, Float_t fcfycenter, Float_t fcfywidth, Float_t fcftotalpe, Float_t fcfdistance);
     
-    MyLArTools * lar_tools;
+    void   AddNeighborTrack ( Int_t , Float_t , Float_t );
+
     
     
     // getters
@@ -118,6 +119,11 @@ public:
     Float_t        GetTheta (){return theta;};
     Float_t          GetPhi (){return phi;};
     
+        
+        
+        
+    MyLArTools * lar_tools;
+
     
     Int_t       MCpdgCode   ;
     Int_t       run         , subrun    , event;

@@ -190,11 +190,24 @@ void PandoraNuTrack::Straightness(){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 void PandoraNuTrack::Momentum(){
     
-
+    // this is true only if this track was a proton
     momentum = lar_tools->GetMomentumFromRange(length);
     
     
 }
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+void PandoraNuTrack::AddNeighborTrack( Int_t ftrack_id , Float_t fClosestDistance , Float_t fangle ){
+    
+    NNeighborTracks++ ;
+    
+    NeighborTracks.push_back( ftrack_id );
+    
+    NeighborTracksDistance.push_back( fClosestDistance );
+
+    NeighborTracksAngles.push_back( fangle );
+}
+
 
 
 
@@ -219,10 +232,10 @@ void PandoraNuTrack::Print(){
     PrintBox(roi[0]);
     PrintBox(roi[1]);
     PrintBox(roi[2]);
-    cout << "\033[37m" << NNeighborTracks << " neighboring tracks" << (NNeighborTracks>0) ? ":" : "";
+    cout << "\033[37m" << NNeighborTracks << " neighboring tracks" ;
     for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
         cout
-        << "track "                 << NeighborTracks[i]
+        << "\t track "                 << NeighborTracks[i]
         << ", distance: "           << NeighborTracksDistance[i]
         << " cm, relative angle:"   << NeighborTracksAngles[i]
         << " deg.\n";
