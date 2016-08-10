@@ -335,39 +335,73 @@ void calcAnaTree::GetCloseTracks(){
     // intended to find fragmentation of tracks or badly-reconstructed parts of EM-showers,
     // and eliminate them from our protons sample
     for (auto &t1 : tracks){
-        
+
+        geoalgo::LineSegment segmented_t1 = ConvertIntoGeoSegmentedTrack(t1);
+
         for (auto &t2 : tracks){
             
             if (t1.track_id != t2.track_id){ // don't consider the same track....
                 
-                Float_t StartPointLineDistacne  = PointLineDistacne( t1.start_pos , t1.end_pos , t2.start_pos );
-                
-                Float_t EndPointLineDistacne    = PointLineDistacne( t1.start_pos , t1.end_pos , t2.end_pos   );
-
-                Float_t ClosestDistance = std::min(StartPointLineDistacne , EndPointLineDistacne);
-
-                
-                if (debug > 2)
-                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm (closest %.1f cm )"
-                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne,ClosestDistance);
+                geoalgo::LineSegment segmented_t2 = ConvertIntoGeoSegmentedTrack(t2);
                 
                 
-                if ( ClosestDistance < TracsMinDistance ) {
+                double closest_distacne = sqrt(geo_algo.SqDist(segmented_t1, segmented_t2));
+                if(debug>2){
+                    Printf("closest distance between track %d and track %d: %.1f cm",t1.track_id,t2.track_id,closest_distacne);
+                }
+                if ( closest_distacne < TracsMinDistance ) {
                     
-                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
-                                                             / (t1.length * t2.length) );
-                    t1.AddNeighborTrack( t2.track_id , ClosestDistance , angle );
+                    Float_t angle = TMath::RadToDeg() * segmented_t1.Dir().Angle(segmented_t2.Dir());
+//                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
+//                                                             / (t1.length * t2.length) );
+                    t1.AddNeighborTrack( t2.track_id , closest_distacne , angle );
                     
-                    if (debug > 2)
+                    if (debug > 2){
                         Printf("plugged track %d into %d's neighbors, with distance %.2f cm, and angle %.2f deg."
-                               ,t2.track_id , t1.track_id , ClosestDistance , ClosestDistance , angle);
+                               ,t2.track_id , t1.track_id , closest_distacne , angle );
+                    }
                 }
             }
         }
     }
+    
+                // XX
+                // my way - probably not goof....
+//                Float_t StartPointLineDistacne  = PointLineDistacne( t1.start_pos , t1.end_pos , t2.start_pos );
+//                
+//                Float_t EndPointLineDistacne    = PointLineDistacne( t1.start_pos , t1.end_pos , t2.end_pos   );
+//
+//                Float_t ClosestDistance = std::min(StartPointLineDistacne , EndPointLineDistacne);
+//
+//                
+//                if (debug > 2)
+//                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm (closest %.1f cm )"
+//                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne,ClosestDistance);
+//                
+//                
+//                if ( ClosestDistance < TracsMinDistance ) {
+//                    
+//                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
+//                                                             / (t1.length * t2.length) );
+//                    t1.AddNeighborTrack( t2.track_id , ClosestDistance , angle );
+//                    
+//                    if (debug > 2)
+//                        Printf("plugged track %d into %d's neighbors, with distance %.2f cm, and angle %.2f deg."
+//                               ,t2.track_id , t1.track_id , ClosestDistance , ClosestDistance , angle);
+//                }
+//            }
+//        }
+//    }
 }
 
 
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+geoalgo::LineSegment calcAnaTree::ConvertIntoGeoSegmentedTrack(PandoraNuTrack track){
+    geoalgo::LineSegment segmentedtrack(track.start_pos.x(), track.start_pos.y(), track.start_pos.z(),
+                track.end_pos.x(), track.end_pos.y(), track.end_pos.z());
+    return segmentedtrack;
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 Float_t calcAnaTree::PointLineDistacne(TVector3 x1 , TVector3 x2 , TVector3 x0){

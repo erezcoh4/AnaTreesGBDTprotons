@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 flags = input_flags.get_args()
 
-score = 0.95
+score = 0.99
 ScoresName = "JustMCtraining"
 
 ListName = "small_20_files_extBNB_AnalysisTrees" if flags.verbose>5 else "extBNB_AnalysisTrees"
@@ -15,13 +15,13 @@ GBDTScoresFileName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ScoresName+ "/
 PassedGBDTFileName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ScoresName+ "/" + "passedGBDT_"+ListName+"_"+ScoresName+"_score_%.2f.csv"%score
 
 
-data = pd.read_csv(GBDTScoresFileName,sep=',')
+data = pd.read_csv(GBDTScoresFileName,sep=',') # file got from Katherine
 
 #data = pd.read_csv(GBDTScoresFileName,sep=' ',names=['run','subrun','event','trackid'
 #                                                     ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
 #                                                     ,'V_start_wire','V_end_wire','V_start_time','V_end_time'
 #                                                     ,'Y_start_wire','Y_end_wire','Y_start_time','Y_end_time'
-#                                                     ,'mscore' ])
+#                                                     ,'mscore' ]) # i make these files...
 if flags.verbose>0:
     print GBDTScoresFileName
     print "loaded %d tracks "%len(data)

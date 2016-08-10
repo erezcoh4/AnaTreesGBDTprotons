@@ -238,7 +238,7 @@ void PandoraNuTrack::Print(){
     cout << "\033[33m" << NNeighborTracks << " neighboring tracks" ;
     for (size_t i = 0 ; i < NNeighborTracks ; i++ ){
         cout
-        << "\ntrack "              << NeighborTracks[i]
+        << "\ntrack "               << NeighborTracks[i]
         << ", distance: "           << NeighborTracksDistance[i]
         << " cm, relative angle:"   << NeighborTracksAngles[i]
         << " deg.";

@@ -60,7 +60,7 @@ namespace ROOT {
       ::calcAnaTree *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::calcAnaTree));
       static ::ROOT::TGenericClassInfo 
-         instance("calcAnaTree", "calcAnaTree.h", 29,
+         instance("calcAnaTree", "calcAnaTree.h", 30,
                   typeid(::calcAnaTree), DefineBehavior(ptr, ptr),
                   &calcAnaTree_Dictionary, isa_proxy, 4,
                   sizeof(::calcAnaTree) );
@@ -510,6 +510,7 @@ namespace {
     static const char* includePaths[] = {
 "/Users/erezcohen/larlite/UserDev/mySoftware",
 "/Users/erezcohen/larlite/UserDev/MyLarLite/MyPackage",
+"/Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo",
 "/Users/erezcohen/larlite/core",
 "/Users/erezcohen/root6/root-6.04.10/include",
 "/Users/erezcohen/larlite/UserDev/AnaTreesGBDTprotons/GBDTprotonsPackage/",

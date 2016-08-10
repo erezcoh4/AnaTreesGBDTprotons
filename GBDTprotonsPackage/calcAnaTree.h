@@ -17,6 +17,7 @@
 #include "PandoraNuTrack.h"
 #include <ostream>
 #include "TChain.h"
+#include "GeoAlgo.h"
 #define MAX_tracks 1000
 #define MAX_hits 50000
 
@@ -74,7 +75,8 @@ public:
     bool   TrackContained (Int_t);
     void        PrintData (int);
     void releaseAddresses (){ OutTree->SetBranchStatus("*",0); };
-    
+    geoalgo::LineSegment ConvertIntoGeoSegmentedTrack( PandoraNuTrack );
+
     
     // csv output
     void  WriteTracks2CSV ();
@@ -123,7 +125,8 @@ public:
     
     
     
-    
+    // GeoAlgo
+    geoalgo::GeoAlgo geo_algo;
     
     
     // std::vector-s

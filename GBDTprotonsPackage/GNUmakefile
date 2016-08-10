@@ -11,6 +11,7 @@ OBJECTS = $(SOURCES:.cxx=.o)
 INCFLAGS  = -I.                       #Include itself
 INCFLAGS += -I$(LARLITE_USERDEVDIR)/mySoftware
 INCFLAGS += -I$(LARLITE_USERDEVDIR)/MyLarLite/MyPackage
+INCFLAGS += -I$(LARLITE_USERDEVDIR)/BasicTool/GeoAlgo
 INCFLAGS += $(shell larlite-config --includes)
 
 
@@ -25,4 +26,5 @@ include $(LARLITE_BASEDIR)/Makefile/Makefile.${OSNAME}
 
 # call the common GNUmakefile
 LDFLAGS += $(shell larlite-config --libs)
+LDFLAGS += -L$(LARLITE_LIBDIR) -lBasicTool_GeoAlgo
 include $(LARLITE_BASEDIR)/Makefile/GNUmakefile.CORE
