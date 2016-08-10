@@ -13,7 +13,7 @@ Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if worker=="erez" else
 
 ListsPath = Path+"/lists"
 AnaPath = Path+"/BDTanaFiles"
-CSVFilesPath = Path+"/CSVOutFiles"
+CSVFilesPath = Path+"/FeaturesFiles"
 ListName = "openCOSMIC_MC_AnalysisTrees" if MCmode==True else "extBNB_AnalysisTrees"
 #"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" # openCOSMIC_MC_AnalysisTrees
 

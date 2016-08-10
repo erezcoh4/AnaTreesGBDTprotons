@@ -352,8 +352,6 @@ void calcAnaTree::GetCloseTracks(){
                 if ( closest_distacne < TracsMinDistance ) {
                     
                     Float_t angle = TMath::RadToDeg() * segmented_t1.Dir().Angle(segmented_t2.Dir());
-//                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
-//                                                             / (t1.length * t2.length) );
                     t1.AddNeighborTrack( t2.track_id , closest_distacne , angle );
                     
                     if (debug > 2){
@@ -365,33 +363,6 @@ void calcAnaTree::GetCloseTracks(){
         }
     }
     
-                // XX
-                // my way - probably not goof....
-//                Float_t StartPointLineDistacne  = PointLineDistacne( t1.start_pos , t1.end_pos , t2.start_pos );
-//                
-//                Float_t EndPointLineDistacne    = PointLineDistacne( t1.start_pos , t1.end_pos , t2.end_pos   );
-//
-//                Float_t ClosestDistance = std::min(StartPointLineDistacne , EndPointLineDistacne);
-//
-//                
-//                if (debug > 2)
-//                    Printf("distance between track %d and track %d: start-point %.1f cm, end-point %.1f cm (closest %.1f cm )"
-//                           ,t1.track_id,t2.track_id,StartPointLineDistacne,EndPointLineDistacne,ClosestDistance);
-//                
-//                
-//                if ( ClosestDistance < TracsMinDistance ) {
-//                    
-//                    Float_t angle = TMath::RadToDeg() * acos( ( t2.end_pos-t2.start_pos ).Dot( t1.end_pos-t1.start_pos )
-//                                                             / (t1.length * t2.length) );
-//                    t1.AddNeighborTrack( t2.track_id , ClosestDistance , angle );
-//                    
-//                    if (debug > 2)
-//                        Printf("plugged track %d into %d's neighbors, with distance %.2f cm, and angle %.2f deg."
-//                               ,t2.track_id , t1.track_id , ClosestDistance , ClosestDistance , angle);
-//                }
-//            }
-//        }
-//    }
 }
 
 
