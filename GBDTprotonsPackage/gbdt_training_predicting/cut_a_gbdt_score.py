@@ -1,6 +1,7 @@
 # take csv data and predict proton scores
 
 import ROOT ,os, sys , math
+sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -15,7 +16,7 @@ GBDTScoresFileName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ScoresName+ "/
 PassedGBDTFileName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ScoresName+ "/" + "passedGBDT_"+ListName+"_"+ScoresName+"_score_%.2f.csv"%score
 
 
-data = pd.read_csv(GBDTScoresFileName,sep=',') # file got from Katherine
+data = pd.read_csv(GBDTScoresFileName,sep=',') # file got from Katherine has ROIs start/end reversed
 
 #data = pd.read_csv(GBDTScoresFileName,sep=' ',names=['run','subrun','event','trackid'
 #                                                     ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
@@ -38,9 +39,9 @@ if flags.verbose>0: print "purity for score %.2f is %.4f (left w/ %d tracks out 
 
 # now dump the run and event number to csv to use as input to larsoft filter
 data_pass[['run','subrun','event','trackid'
-            ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
-            ,'V_start_wire','V_end_wire','V_start_time','V_end_time'
-            ,'Y_start_wire','Y_end_wire','Y_start_time','Y_end_time'
+            ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
+            ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
+            ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
             ,'score' ]].to_csv(PassedGBDTFileName,header=False,index=False,sep=' ')
 
 
