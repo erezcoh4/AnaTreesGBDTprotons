@@ -8,7 +8,7 @@ flags = input_flags.get_args()
 
 
 Path = "/pnfs/uboone/persistent/users/aschu/MC_BNB_Cosmic/"
-FileName = "prodgenie_bnb_nu_cosmic_uboone_v05_08_00_anatree.root"
+FileName = "prodgenie_bnb_nu_cosmic_uboone_v05_08_00_anatree"
 SavePath = "/uboone/data/users/ecohen/plots" if flags.worker == 'uboone' else "/Users/erezcohen/Desktop"
 
 operation = flags.operation
