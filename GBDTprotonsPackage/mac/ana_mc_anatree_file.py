@@ -11,9 +11,9 @@ Path = "/pnfs/uboone/persistent/users/aschu/MC_BNB_Cosmic/"
 FileName = "prodgenie_bnb_nu_cosmic_uboone_v05_08_00_anatree.root"
 
 
-operation = "contained-CCQE"
-
-
+operation = flags.operation
+var = flags.variable
+print operation + ", " + var
 
 #InFile = ROOT.TFile(Path+"/"+FileName+".root")
 #InTree = InFile.Get("analysistree/anatree")
@@ -22,6 +22,9 @@ ana = TPlots(Path+"/"+FileName+".root" , "analysistree/anatree")
 NtreeEntries = ana.GetEntries()
 print "NtreeEntries: ", NtreeEntries
 #Nevents =
+
+
+
 
 if operation == "contained-CCQE":
 
@@ -34,6 +37,8 @@ if operation == "contained-CCQE":
     
     uBooNEtitle = "MicroBooNE expectation for contained CCQE (6.6e20 POT)"
     
+    c = ana.CreateCanvas(var)
+    
     if var == 'pot'
         
         h = ana.H1( 'pot', flags.cut , "hist same" , 100 , 0 , 3 , "simulated POT" , "protons on target" )
@@ -45,3 +50,7 @@ if operation == "contained-CCQE":
 
         ana.Line(1,0,1,h.GetMaximum())
         ana.Text(1.2,0.8*h.GetMaximum(),"")
+
+
+
+
