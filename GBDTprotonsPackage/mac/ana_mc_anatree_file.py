@@ -39,12 +39,12 @@ if operation == "contained-CCQE":
     
     c = ana.CreateCanvas(var)
     
-    if var == 'pot'
+    if var == 'pot':
         
         h = ana.H1( 'pot', flags.cut , "hist same" , 100 , 0 , 3 , "simulated POT" , "protons on target" )
    
     
-    if var == 'Q2':
+    elif var == 'Q2':
         
         h = ana.H1( 'Q2_truth', contained_CCQE , "hist same" , 100 , 0 , 3 , uBooNEtitle , gp.Q2tit )
 
