@@ -2,7 +2,8 @@ import ROOT , os , sys
 from ROOT import TPlots
 sys.path.insert(0, '/Users/erezcohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
 sys.path.insert(0, '/uboone/app/users/ecohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
-import Initiation as init , GeneralPlot as gp, input_flags
+#import Initiation as init
+import GeneralPlot as gp, input_flags
 flags = input_flags.get_args()
 
 
