@@ -9,7 +9,7 @@ flags = input_flags.get_args()
 
 Path = "/pnfs/uboone/persistent/users/aschu/MC_BNB_Cosmic/"
 FileName = "prodgenie_bnb_nu_cosmic_uboone_v05_08_00_anatree.root"
-
+SavePath = "/uboone/data/users/ecohen/plots" if flags.worker == 'uboone' else "/Users/erezcohen/Desktop"
 
 operation = flags.operation
 var = flags.variable
@@ -52,5 +52,8 @@ if operation == "contained-CCQE":
         ana.Text(1.2,0.8*h.GetMaximum(),"")
 
 
+
+    c.SaveAs( SavePath+"/uBexpectation_"+var+".pdf")
+    print "saved plot:\n"+SavePath+"/uBexpectation_"+var+".pdf"
 
 
