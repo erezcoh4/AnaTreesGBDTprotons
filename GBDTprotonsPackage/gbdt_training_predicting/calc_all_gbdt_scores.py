@@ -34,9 +34,9 @@ if debug>0: print "predicted to %d tracks"%len(data)
 
 # now dump the run and event number to csv to use as input to larsoft filter
 data_scores[['run','subrun','event','trackid'
-             ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
-             ,'V_start_wire','V_end_wire','V_start_time','V_end_time'
-             ,'Y_start_wire','Y_end_wire','Y_start_time','Y_end_time'
+             ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
+             ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
+             ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
              ,'mscore' ]].to_csv(PassedGBDTFileName,header=False,index=False,sep=' ')
 
 print "written csv file of all scores:\n" + PassedGBDTFileName

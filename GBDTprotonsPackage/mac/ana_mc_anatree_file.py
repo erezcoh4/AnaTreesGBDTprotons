@@ -42,7 +42,9 @@ if operation == "contained-CCQE":
     if var == 'pot':
         
         h = ana.H1( 'pot', flags.cut , "hist same" , 100 , 0 , 3 , "simulated POT" , "protons on target" )
-   
+        Npot = h.Integral()
+        ana.Text(1.2,0.8*h.GetMaximum(),"")
+
     
     elif var == 'Q2':
         

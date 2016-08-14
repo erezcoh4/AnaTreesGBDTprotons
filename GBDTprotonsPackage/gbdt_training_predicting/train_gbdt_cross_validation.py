@@ -38,10 +38,10 @@ param['nthread']            = 6
 param['min_child_weight']   = 4
 param['max_depth']          = 13
 param['gamma']              = 0.7
-param['colsample_bytree']   = 0.3   # Kat: 0.5
+param['colsample_bytree']   = 0.5   # Kat: 0.5
 param['subsample']          = 0.8
-param['Ntrees']             = 10    # Kat: 500
-param['Nfolds']             = 2     # Kat: 10
+param['Ntrees']             = 500    # Kat: 500
+param['Nfolds']             = 10     # Kat: 10
 #param['reg_alpha']         = 1e-5
 
 

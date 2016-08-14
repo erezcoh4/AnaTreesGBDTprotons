@@ -14,13 +14,22 @@ flags = input_flags.get_args()
 ana = TPlots("/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna/BDTanaFiles/BDTana_openCOSMIC_MC_AnalysisTrees.root","GBDTTree")
 var = flags.variable
 cut = flags.cut
+
+
+if flags.operation == 12:
+    
+    print "usage: \npython ana_COSMICMCtracks.py -var=<default='NNeighborTracks'> --operation=<default='short-tracks'>\n\n"
+    flags.operation = 'short-tracks'
+if var == 12:
+    
+    print "usage: \npython ana_COSMICMCtracks.py -var=<default='NNeighborTracks'> --operation=<default='short-tracks'>\n\n"
+    var = 'NNeighborTracks'
+
+
 c   = ana.CreateCanvas(var)
 
 
-
-
-
-def draw_protons_vs_else (nbins , xlow , xup , xtit ):
+def draw_protons_vs_else (nbins , xlow , xup , xtit , log_scale = False ):
     
         hAll        = ana.H1( 'tracks.'+ var , cut , "hist" , nbins , xlow , xup , "" , xtit , "" , 1 , 1 , 3005 )
     
@@ -28,7 +37,12 @@ def draw_protons_vs_else (nbins , xlow , xup , xtit ):
     
         h9999       = ana.H1( 'tracks.'+ var , ROOT.TCut("tracks.MCpdgCode==-9999") , "hist same" , nbins , xlow , xup , "" , xtit , "" , 2 , 46 , 3007 )
 
+        if log_scale: c.SetLogy()
+
         ana.AddLegend(hAll , "all" , hProtons , "protons" , h9999 , "-9999" , "f")
+
+        return c
+
 
 def draw_2d (vx , nbinsx , xlow , xup , xtit , vy , nbinsy , ylow , yup , ytit ):
 
@@ -45,8 +59,8 @@ def draw_2d (vx , nbinsx , xlow , xup , xtit , vy , nbinsy , ylow , yup , ytit )
         c.cd(3)
         h9999       = ana.H2( 'tracks.'+ vx , 'tracks.'+ vy , ROOT.TCut("tracks.MCpdgCode==-9999") , "col"
                      , nbinsx , xlow , xup , nbinsy , ylow , yup , "-9999" , xtit , ytit , 2 , 21 , 0.3 )
-           
-#        ana.AddLegend(hAll , "all" , hProtons , "protons" , h9999 , "-9999" , "p")
+
+
 
 
 
@@ -58,22 +72,29 @@ if flags.operation == 'short-tracks':
     
     if var == 'NNeighborTracks':
         
-        draw_protons_vs_else ( 40 , -1 , 12 , "number of neighboring tracks" )
- 
+        c = draw_protons_vs_else ( 40 , -1 , 11 , "number of neighboring tracks" , True )
+
+
     elif var == 'NeighborTracksAngles':
      
-        draw_protons_vs_else ( 100 , -1 , 181 , "angles of neighboring tracks [deg.]" )
+        c = draw_protons_vs_else ( 100 , -1 , 181 , "angles of neighboring tracks [deg.]" )
+
 
     elif var == 'NeighborTracksDistance':
 
-        draw_protons_vs_else ( 60 , 0 , 10 , "distance of neighboring tracks [cm]" )
+        c = draw_protons_vs_else ( 60 , 0 , 10 , "distance of neighboring tracks [cm]" )
+
 
     elif var == 'NeighborTracksDistanceVsAngles':
     
         draw_2d ( 'NeighborTracksDistance' , 60 , 0 , 10 , "distance of neighboring tracks [cm]"
                  , 'NeighborTracksAngles' , 100 , -1 , 181 , "angles of neighboring tracks [deg.]" )
     
-
+    
+    elif var == 'Ntracks':
+        
+        ana.H1( var , cut , "hist" , 100 , -1 , 20 , "" , "number of reconstructed tracks in event" )
+        c.SetLogy()
 
     c.Update()
     wait()
