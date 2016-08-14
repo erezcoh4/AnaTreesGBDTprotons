@@ -9,8 +9,6 @@ import Initiation as init , GeneralPlot as gp, input_flags
 init.createnewdir()
 flags = input_flags.get_args()
 
-#ROOT.gStyle.SetOptStat(0000)
-
 ana = TPlots("/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna/BDTanaFiles/BDTana_openCOSMIC_MC_AnalysisTrees.root","GBDTTree")
 var = flags.variable
 cut = flags.cut

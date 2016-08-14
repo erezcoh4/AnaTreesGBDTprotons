@@ -1,5 +1,6 @@
 import ROOT , os , sys
 from ROOT import TPlots
+import matplotlib.pyplot as plt
 sys.path.insert(0, '/Users/erezcohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
 sys.path.insert(0, '/uboone/app/users/ecohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
 #import Initiation as init
@@ -53,6 +54,20 @@ if operation == "contained-CCQE":
         ana.Line(1,0,1,h.GetMaximum())
         ana.Text(1.2,0.8*h.GetMaximum(),"")
 
+
+    elif var == 'ppSRCPmiss':
+    
+        CCQEcutSRC = ROOT.TCut( "\
+                               1.2 < X_truth && \
+                               hitnuc_truth == 2112 && \
+                               
+                               "
+        )
+        h = ana.H1( 'Q2_truth', contained_CCQE , "hist same" , 100 , 0 , 3 , uBooNEtitle , gp.Q2tit )
+        
+        ana.Line(1,0,1,h.GetMaximum())
+        ana.Text(1.2,0.8*h.GetMaximum(),"")
+    
 
 
     c.SaveAs( SavePath+"/uBexpectation_"+var+".pdf")
