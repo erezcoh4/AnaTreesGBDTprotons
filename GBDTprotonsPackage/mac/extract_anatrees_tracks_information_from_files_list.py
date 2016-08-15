@@ -73,6 +73,7 @@ for entry in range(int(flags.evnts_frac*(Nentries))):
     
 if flags.verbose>0: print "extracted %d events\nout-tree has %d events\n\n" % (int(flags.evnts_frac*(Nentries)),OutTree.GetEntries())
 
+TracksTree.Write()
 OutTree.Write()
 OutFile.Close()
 
