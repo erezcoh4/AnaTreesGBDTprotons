@@ -14,13 +14,17 @@ var = flags.variable
 cut = flags.cut
 
 
-if flags.operation == 12:
-    
-    print "usage: \npython ana_COSMICMCtracks.py -var=<default='NNeighborTracks'> --operation=<default='short-tracks'>\n\n"
-    flags.operation = 'short-tracks'
+
+
+'''
+    usage:
+    ---------
+    > python ana_COSMICMCtracks.py -var='NNeighborTracks' --option='short-tracks'
+    '''
+
+if flags.option == 12:
+    flags.option = 'short-tracks'
 if var == 12:
-    
-    print "usage: \npython ana_COSMICMCtracks.py -var=<default='NNeighborTracks'> --operation=<default='short-tracks'>\n\n"
     var = 'NNeighborTracks'
 
 
@@ -64,13 +68,30 @@ def draw_2d (vx , nbinsx , xlow , xup , xtit , vy , nbinsy , ylow , yup , ytit )
 
 
 
-if flags.operation == 'short-tracks':
+if flags.option == 'short-tracks':
     
     
     
     if var == 'NNeighborTracks':
         
         c = draw_protons_vs_else ( 40 , -1 , 11 , "number of neighboring tracks" , True )
+
+
+
+    elif var == 'phi':
+    
+        c = draw_protons_vs_else ( 100 , -6.28 , 6.28 , "track azimuthal angle [rad]" )
+    
+
+
+    elif var == 'length':
+
+        c = draw_protons_vs_else ( 100 , -1 , 100 , "track length [cm]" )
+
+    elif var == 'avg_dqdx':
+    
+        c = draw_protons_vs_else ( 100 , -1 , 100 , "avg. dq/dx [ADC/cm]" )
+    
 
 
     elif var == 'NeighborTracksAngles':
@@ -93,6 +114,25 @@ if flags.operation == 'short-tracks':
         
         ana.H1( var , cut , "hist" , 100 , -1 , 20 , "" , "number of reconstructed tracks in event" )
         c.SetLogy()
+
+
+
+    elif var == 'TopBottDir':
+    
+        c = draw_protons_vs_else ( 60 , -2 , 2 , "top/bottom direction" )
+    
+
+
+    elif var == 'LefRghtDir':
+        
+        c = draw_protons_vs_else ( 60 , -2 , 2 , "left/right direction" )
+
+
+    elif var == 'ForBackDir':
+    
+        c = draw_protons_vs_else ( 60 , -2 , 2 , "forward/backward direction" )
+    
+
 
     c.Update()
     wait()
