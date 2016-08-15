@@ -129,7 +129,7 @@ public:
     Int_t       run         , subrun    , event;
     Int_t       nhits       , is_flipped;
     Int_t       NNeighborTracks;
-    Int_t       TopBottDir , ForBackDir , LefRghtDir;
+//    Int_t       TopBottDir , ForBackDir , LefRghtDir; // remove - deprecated
     Short_t     track_id;
     
     TVector3    start_pos   , end_pos   ;
@@ -139,6 +139,9 @@ public:
     Float_t     dqdx_diff   , dqdx_ratio;
     Float_t     pidpida     ,  pidchi   , cosmicscore   , coscontscore;
     Float_t     cftime      , cftimewidth , cfzcenter , cfzwidth, cfycenter , cfywidth  , cftotalpe , cfdistance;
+    
+    TString     TopBottDir  , ForBackDir , LefRghtDir;
+
     
     box         roi[3];
     

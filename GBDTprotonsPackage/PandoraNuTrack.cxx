@@ -172,13 +172,9 @@ void PandoraNuTrack::Calorimetry(){
     dqdx_ratio    = end_dqdx/start_dqdx;
     
     // ask about the directionality of the track
-    // T/B: 1 = bottom -> top       , -1 = top -> bottom
-    // F/B: 1 = forward (along BNB) , -1 = backward (against BNB)
-    // L/R: 1 = left -> right       , -1 = right -> left
-    
-    TopBottDir = 1 ? start_pos.y() > end_pos.y() : -1 ;
-    ForBackDir = 1 ? start_pos.z() > end_pos.z() : -1 ;
-    LefRghtDir = 1 ? start_pos.x() > end_pos.x() : -1 ;
+    TopBottDir = (start_pos.y() > end_pos.y()) ? "Top->Bottom" : "Bottom->Top" ; // T/B: 1 = bottom -> top       , -1 = top -> bottom
+    ForBackDir = (start_pos.z() > end_pos.z()) ? "forward (along BNB)" : "backward (against BNB)" ; // F/B: 1 = forward (along BNB) , -1 = backward (against BNB)
+    LefRghtDir = (start_pos.x() > end_pos.x()) ? "Left -> Right" : "Right -> Left" ; // L/R: 1 = left -> right       , -1 = right -> left
     
 }
 

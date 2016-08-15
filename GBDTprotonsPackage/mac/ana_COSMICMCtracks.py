@@ -131,6 +131,8 @@ if flags.option == 'short-tracks':
     elif var == 'ForBackDir':
     
         c = draw_protons_vs_else ( 60 , -2 , 2 , "forward/backward direction" )
+        c.cd()
+        ana.Text("forward (along BNB)")
     
 
 
