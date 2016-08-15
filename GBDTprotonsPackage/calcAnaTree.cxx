@@ -25,7 +25,7 @@ calcAnaTree::calcAnaTree( TTree * fInTree, TTree * fOutTree, TTree * fTracksTree
     
     SetInTree(fInTree);
     SetOutTree(fOutTree);
-    SetOutTree(fTracksTree);
+    SetTracksTree(fTracksTree);
     SetDebug(fdebug);
     SetMCMode(fMCmode);
     SetCSVFileName (fCSVFileName);
@@ -104,7 +104,7 @@ void calcAnaTree::InitOutputTrees(){
     OutTree -> Branch("tracks"      ,&tracks);
 
     // Tracks tree
-    TracksTree -> Branch("pNuTrack" ,"PandoraNuTrack"   ,&pNuTrack);
+    TracksTree -> Branch("pNuTrack" ,&pNuTrack);
 
     
     if(debug>1) cout << "calcAnaTree output-trees ready (" << OutTree->GetTitle() << "), (" << TracksTree->GetTitle() << ")" << endl;
