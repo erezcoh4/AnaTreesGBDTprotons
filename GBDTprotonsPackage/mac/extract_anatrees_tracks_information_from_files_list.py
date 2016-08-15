@@ -46,7 +46,7 @@ Nentries = in_chain.GetEntries()
 
 OutFile     = ROOT.TFile(AnafileName,"recreate")
 OutTree     = ROOT.TTree("GBDTTree","physical variables per event")
-TracksTree  = ROOT.TTree("TacksTree","pandoraNu tracks")
+TracksTree  = ROOT.TTree("TracksTree","pandoraNu tracks")
 
 
 if flags.verbose>1: print in_chain,OutTree,TracksTree
