@@ -2,7 +2,8 @@ import ROOT , os , sys, larlite, argparse
 from ROOT import *
 from ROOT import calcAnaTree
 from ROOT import AnaTreeTools
-sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
+sys.path.insert(0, '/uboone/app/users/ecohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
+sys.path.insert(0, '/Users/erezcohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
 
