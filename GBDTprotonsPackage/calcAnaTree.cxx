@@ -21,15 +21,16 @@ bool calcAnaTree::get_bdt_tools (int entry){ // main event loop....
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-calcAnaTree::calcAnaTree( TTree * fInTree, TTree * fOutTree, TString fCSVFileName, int fdebug, bool fMCmode){
+calcAnaTree::calcAnaTree( TTree * fInTree, TTree * fOutTree, TTree * fTracksTree, TString fCSVFileName, int fdebug, bool fMCmode){
     
     SetInTree(fInTree);
     SetOutTree(fOutTree);
+    SetOutTree(fTracksTree);
     SetDebug(fdebug);
     SetMCMode(fMCmode);
     SetCSVFileName (fCSVFileName);
     InitInputTree();
-    InitOutputTree();
+    InitOutputTrees();
     InitOutputCSV();
     
 }
@@ -55,7 +56,6 @@ void calcAnaTree::InitInputTree(){
     InTree -> SetBranchAddress("ntrkhits_pandoraNu"                             , &ntrkhits_pandoraNu);
     InTree -> SetBranchAddress("trkdqdx_pandoraNu"                              , &trkdqdx_pandoraNu);
     InTree -> SetBranchAddress("trkresrg_pandoraNu"                             , &trkresrg_pandoraNu);
-    //    InTree -> SetBranchAddress("trkxyz_pandoraNu"                               , &trkxyz_pandoraNu); // unused - delete
     InTree -> SetBranchAddress("trkncosmictags_tagger_pandoraNu"                , &trkncosmictags_tagger_pandoraNu);
     InTree -> SetBranchAddress("trkcosmicscore_tagger_pandoraNu"                , &trkcosmicscore_tagger_pandoraNu);
     InTree -> SetBranchAddress("trkcosmictype_tagger_pandoraNu"                 , &trkcosmictype_tagger_pandoraNu);
@@ -68,7 +68,6 @@ void calcAnaTree::InitInputTree(){
     InTree -> SetBranchAddress("no_hits"                                        , &no_hits);
     InTree -> SetBranchAddress("hit_plane"                                      , &hit_plane);
     InTree -> SetBranchAddress("hit_wire"                                       , &hit_wire);
-    //    InTree -> SetBranchAddress("hit_peakT"                                      , &hit_peakT); // unused - delete
     InTree -> SetBranchAddress("hit_trkid"                                      , &hit_trkid);
     InTree -> SetBranchAddress("hit_trkKey"                                     , &hit_trkKey);
 
@@ -95,19 +94,21 @@ void calcAnaTree::InitInputTree(){
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-void calcAnaTree::InitOutputTree(){
+void calcAnaTree::InitOutputTrees(){
     
-    // Integer branches
+    // Events tree
     OutTree -> Branch("run"         ,&run               ,"run/I");
     OutTree -> Branch("subrun"      ,&subrun            ,"subrun/I");
     OutTree -> Branch("event"       ,&event             ,"event/I");
     OutTree -> Branch("Ntracks"     ,&Ntracks           ,"Ntracks/I"); // number of contained tracks, not ntracks_pandoraNu...
-    
-    
-    // Float_t branches
     OutTree -> Branch("tracks"      ,&tracks);
+
+    // Tracks tree
+    TracksTree -> Branch("pNuTrack" ,&pNuTrack);
+
     
-    if(debug>1) cout << "calcAnaTree output-tree ready (" << OutTree -> GetTitle() << endl;
+    
+    if(debug>1) cout << "calcAnaTree output-trees ready (" << OutTree->GetTitle() << "), (" << TracksTree->GetTitle() << ")" << endl;
 }
 
 
@@ -322,7 +323,8 @@ void calcAnaTree::LoopPanNuTracks(){
         }
 
         
-        
+        pNuTrack = cTrack;
+        TracksTree -> Fill();
         tracks.push_back(cTrack);
         if(debug>3) Printf("pushed the track into tracks which now has a size %lu...",tracks.size());
     }

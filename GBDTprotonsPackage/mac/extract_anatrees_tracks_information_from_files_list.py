@@ -43,13 +43,14 @@ if flags.verbose>0: print "input chain entries from",int(flags.files_frac*len(fi
 Nentries = in_chain.GetEntries()
 
 
-OutFile = ROOT.TFile(AnafileName,"recreate")
-OutTree = ROOT.TTree("GBDTTree","physical variables taken from pandoraNu tracking algorithm")
+OutFile     = ROOT.TFile(AnafileName,"recreate")
+OutTree     = ROOT.TTree("GBDTTree","physical variables per event")
+TracksTree  = ROOT.TTree("TacksTree","pandoraNu tracks")
 
 
-if flags.verbose>1: print in_chain,OutTree
+if flags.verbose>1: print in_chain,OutTree,TracksTree
     
-calc = calcAnaTree( in_chain , OutTree , CSVfileName , flags.verbose , MCmode )
+calc = calcAnaTree( in_chain , OutTree , TracksTree , CSVfileName , flags.verbose , MCmode )
 
 counter = 0
 for entry in range(int(flags.evnts_frac*(Nentries))):

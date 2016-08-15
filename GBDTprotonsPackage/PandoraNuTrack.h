@@ -129,7 +129,6 @@ public:
     Int_t       run         , subrun    , event;
     Int_t       nhits       , is_flipped;
     Int_t       NNeighborTracks;
-//    Int_t       TopBottDir , ForBackDir , LefRghtDir; // remove - deprecated
     Short_t     track_id;
     
     TVector3    start_pos   , end_pos   ;
