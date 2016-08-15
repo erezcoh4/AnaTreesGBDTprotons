@@ -104,9 +104,8 @@ void calcAnaTree::InitOutputTrees(){
     OutTree -> Branch("tracks"      ,&tracks);
 
     // Tracks tree
-    TracksTree -> Branch("pNuTrack" ,&pNuTrack);
+    TracksTree -> Branch("pNuTrack" ,"PandoraNuTrack"   ,&pNuTrack);
 
-    
     
     if(debug>1) cout << "calcAnaTree output-trees ready (" << OutTree->GetTitle() << "), (" << TracksTree->GetTitle() << ")" << endl;
 }
