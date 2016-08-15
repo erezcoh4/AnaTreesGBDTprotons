@@ -114,7 +114,7 @@ public:
     Float_t     trklen_pandoraNu[MAX_tracks]    , trkstartx_pandoraNu[MAX_tracks]   , trkstarty_pandoraNu[MAX_tracks];
     Float_t     trkstartz_pandoraNu[MAX_tracks] , trkendx_pandoraNu[MAX_tracks] , trkendy_pandoraNu[MAX_tracks];
     Float_t     trkendz_pandoraNu[MAX_tracks]   , trktheta_pandoraNu[MAX_tracks], trkphi_pandoraNu[MAX_tracks];
-    Float_t     trkdqdx_pandoraNu[MAX_tracks][3][MAX_hits]                      , trkresrg_pandoraNu[MAX_tracks][3][MAX_hits] ;
+    Float_t     trkdqdx_pandoraNu[MAX_tracks][3][2000]                      , trkresrg_pandoraNu[MAX_tracks][3][2000] ;
     Float_t     trkcosmicscore_tagger_pandoraNu[MAX_tracks][10] , trkcosmicscore_containmenttagger_pandoraNu[MAX_tracks][10];
     Float_t     trkpidchi_pandoraNu[MAX_tracks][3]  , trkpidpida_pandoraNu[MAX_tracks][3]   , flash_time[MAX_hits]  , flash_timewidth[MAX_hits] , flash_pe[MAX_hits];
     Float_t     flash_ycenter[MAX_hits]   , flash_ywidth[MAX_hits]    , flash_zcenter[MAX_hits]   , flash_zwidth[MAX_hits];
