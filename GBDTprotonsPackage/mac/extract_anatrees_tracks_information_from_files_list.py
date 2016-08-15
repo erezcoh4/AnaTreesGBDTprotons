@@ -52,7 +52,7 @@ if flags.verbose>1: print in_chain,OutTree
 calc = calcAnaTree( in_chain , OutTree , CSVfileName , flags.verbose , MCmode )
 
 counter = 0
-for entry in range(int(flags.ev_frac*(Nentries))):
+for entry in range(int(flags.evnts_frac*(Nentries))):
         
     calc.get_bdt_tools( entry )
         
@@ -70,7 +70,7 @@ for entry in range(int(flags.ev_frac*(Nentries))):
 
 
     
-if flags.verbose>0: print "extracted %d events\nout-tree has %d events\n\n" % (int(flags.ev_frac*(Nentries)),OutTree.GetEntries())
+if flags.verbose>0: print "extracted %d events\nout-tree has %d events\n\n" % (int(flags.evnts_frac*(Nentries)),OutTree.GetEntries())
 
 OutTree.Write()
 OutFile.Close()
