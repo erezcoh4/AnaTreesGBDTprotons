@@ -1,4 +1,12 @@
 
+
+'''
+    usage:
+    ---------
+    > python gbdt_training_predicting/test_gbdt_on_mc.py -werez -v1
+    '''
+
+
 import ROOT ,os, sys , math , time
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -10,14 +18,6 @@ sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
 
-
-
-
-'''
-    usage:
-    ---------
-    > python gbdt_training_predicting/test_gbdt_on_mc.py -werez -v1
-    '''
 
 
 
