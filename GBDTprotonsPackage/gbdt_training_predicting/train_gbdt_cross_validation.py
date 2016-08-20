@@ -8,6 +8,16 @@ sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
 
+
+
+
+'''
+    usage:
+    ---------
+    > python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
+    '''
+
+
 ModelName = "cosmic_trained_only_on_mc"
 TrainingSample = "200000_tracks_openCOSMIC_MC_AnalysisTrees"
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
@@ -45,6 +55,11 @@ param['Nfolds']             = 10     # Kat: 10
 #param['reg_alpha']         = 1e-5
 
 
+
+AskCrossValidation = int(input("cross validate model? \n( yes-1 / no-0 ):\n > "))
+DoCrossValidation = True if AskCrossValidation==1 else False
+
+
 # (A) load the data
 # ---------------------------------------
 data,label,weight = boost_cosmic.load_data( TrainingSampleName , feature_names )
@@ -60,34 +75,36 @@ if flags.verbose>0:
 
 # (B) cross-validation step
 # ---------------------------------------
-test_error,test_falsepos,test_falseneg,scores = boost_cosmic.run_cv( data , label , weight , param )
+if DoCrossValidation:
+    test_error,test_falsepos,test_falseneg,scores = boost_cosmic.run_cv( data , label , weight , param )
 
 
-if flags.verbose>0:
-    print "ran cross-validation"
-    print "test_error: \n",test_error
-    print "test_falsepos: \n",test_falsepos
-    print "test_falseneg: \n",test_falseneg
-    print "scores: \n",scores
+    if flags.verbose>0:
+        print "ran cross-validation"
+        print "test_error: \n",test_error
+        print "test_falsepos: \n",test_falsepos
+        print "test_falseneg: \n",test_falseneg
+        print "scores: \n",scores
 
 
 
 
 # (C) check if errors are stable
 # ---------------------------------------
-plt.figure()
-plt.hist( test_error )
-plt.title("test errors")
-plt.xlabel("error")
-plt.ylabel("Frequency")
-plt.savefig( model_path + "/test_errors_" + ModelName + ".pdf" )
-plt.show()
-
-AskContinue = int(input("build model? \n( yes-1 / no-0 ):\n > "))
-DoContinue = True if AskContinue==1 else False
+    plt.figure()
+    plt.hist( test_error )
+    plt.title("test errors")
+    plt.xlabel("error")
+    plt.ylabel("Frequency")
+    plt.savefig( model_path + "/test_errors_" + ModelName + ".pdf" )
+    plt.show()
 
 
+    AskContinue = int(input("build model? \n( yes-1 / no-0 ):\n > "))
+    DoContinue = True if AskContinue==1 else False
 
+
+if DoCrossValidation == False: DoContinue = True
 
 
 # (D) build the GBDTs which is training on the entire
@@ -133,14 +150,15 @@ string+=        "\nsubsample: "         +str(param['subsample'])
 string+=        "\nNtrees: "            +str(param['Ntrees'])
 string+=        "\nNfolds: "            +str(param['Nfolds'])
 string+=        "\n--------------------- \n"
-string+=        "\terrors:\n"
-string+=        str(test_error[:])
-string+=        "\n--------------------- \n"
-string+=        "false-positive: \n"
-string+=        str(test_falsepos[:])
-string+=        "\n--------------------- \n"
-string+=        "false-negative: \n"
-string+=        str(test_falseneg[:])
+if DoCrossValidation == True:
+    string+=        "\terrors:\n"
+    string+=        str(test_error[:])
+    string+=        "\n--------------------- \n"
+    string+=        "false-positive: \n"
+    string+=        str(test_falsepos[:])
+    string+=        "\n--------------------- \n"
+    string+=        "false-negative: \n"
+    string+=        str(test_falseneg[:])
 string+=        "\n--------------------- \n"
 string+=        "\n\n\n\n"
 

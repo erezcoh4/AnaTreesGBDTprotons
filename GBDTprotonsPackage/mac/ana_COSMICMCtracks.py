@@ -9,7 +9,7 @@ import Initiation as init , GeneralPlot as gp, input_flags
 init.createnewdir()
 flags = input_flags.get_args()
 
-ana = TPlots("/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna/BDTanaFiles/BDTana_openCOSMIC_MC_AnalysisTrees.root","GBDTTree")
+ana = TPlots("/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna/BDTanaFiles/BDTana_openCOSMIC_MC_AnalysisTrees.root","TracksTree")
 var = flags.variable
 cut = flags.cut
 
@@ -22,10 +22,8 @@ cut = flags.cut
     > python ana_COSMICMCtracks.py -var='NNeighborTracks' --option='short-tracks'
     '''
 
-if flags.option == 12:
-    flags.option = 'short-tracks'
-if var == 12:
-    var = 'NNeighborTracks'
+if flags.option == 12:  flags.option = 'short-tracks'
+if var == 12:           var = 'NNeighborTracks'
 
 
 c   = ana.CreateCanvas(var)
@@ -33,11 +31,11 @@ c   = ana.CreateCanvas(var)
 
 def draw_protons_vs_else (nbins , xlow , xup , xtit , log_scale = False ):
     
-        hAll        = ana.H1( 'tracks.'+ var , cut , "hist" , nbins , xlow , xup , "" , xtit , "" , 1 , 1 , 3005 )
+        hAll        = ana.H1( var , cut , "hist" , nbins , xlow , xup , "" , xtit , "" , 1 , 1 , 3005 )
     
-        hProtons    = ana.H1( 'tracks.'+ var , ROOT.TCut("tracks.MCpdgCode==2212") , "hist same" , nbins , xlow , xup , "" , xtit , "" , 4 , 38 , 3001 )
+        hProtons    = ana.H1( var , ROOT.TCut("MCpdgCode==2212") + cut , "hist same" , nbins , xlow , xup , "" , xtit , "" , 4 , 38 , 3001 )
     
-        h9999       = ana.H1( 'tracks.'+ var , ROOT.TCut("tracks.MCpdgCode==-9999") , "hist same" , nbins , xlow , xup , "" , xtit , "" , 2 , 46 , 3007 )
+        h9999       = ana.H1( var , ROOT.TCut("MCpdgCode==-9999") + cut , "hist same" , nbins , xlow , xup , "" , xtit , "" , 2 , 46 , 3007 )
 
         if log_scale: c.SetLogy()
 
@@ -90,8 +88,16 @@ if flags.option == 'short-tracks':
 
     elif var == 'avg_dqdx':
     
-        c = draw_protons_vs_else ( 100 , -1 , 100 , "avg. dq/dx [ADC/cm]" )
+        c = draw_protons_vs_else ( 100 , -1 , 1000 , "avg. dq/dx [ADC/cm]" )
     
+    elif var == 'dqdx_ratio':
+    
+        c = draw_protons_vs_else ( 100 , 0.9 , 7 , "dq/dx_{end} / dq/dx_{start} " )
+    
+    elif var == 'tot_dqdx':
+    
+        c = draw_protons_vs_else ( 100 , -1 , 100000 , "dq/dx_{total} [ADC/cm]" )
+
 
 
     elif var == 'NeighborTracksAngles':

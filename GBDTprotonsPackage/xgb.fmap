@@ -1,0 +1,19 @@
+0	$N_{hits}$	q
+1	$length$	q
+2	$y_{start}$	q
+3	$z_{start}$	q
+4	$y_{end}$	q
+5	$z_{end}$	q
+6	$\theta$	q
+7	$\phi$	q
+8	${|\vec{d}|/l}$	q
+9	$dq/dx_{start}$	q
+10	$dq/dx_{end}$	q
+11	$\Delta dq/dx$	q
+12	$dq/dx_{ratio}$	q
+13	$dq/dx_{total}$	q
+14	$dq/dx_{average}$	q
+15	$score_{cosmic}$	q
+16	$score_{contained-cosmic}$	q
+17	${PID_{a}}$	q
+18	${PID_\chi}$	q

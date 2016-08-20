@@ -10,6 +10,17 @@ sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
 
+
+
+
+'''
+    usage:
+    ---------
+    > python gbdt_training_predicting/test_gbdt_on_mc.py -werez -v1
+    '''
+
+
+
 ModelName = "cosmic_trained_only_on_mc"
 TestSample = "55650_tracks_openCOSMIC_MC_AnalysisTrees"
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
@@ -22,10 +33,6 @@ model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/
 
 # (A) load the test sample data and the model
 # ---------------------------------------
-
-
-# (B) predict on the MC data
-# ---------------------------------------
 AskPredict = int(input("predict on MC? \n( yes-1 / no-0 ):\n > "))
 DoPredict = True if AskPredict==1 else False
 
@@ -37,6 +44,8 @@ if (DoPredict):
         print "loaded data and model"
         print "data: \n",data
 
+    # (B) predict on the MC data
+    # ---------------------------------------
     data_scores = predict_cosmic.predict_data( data , model_path + "/" + ModelName + ".bst" )
     # now dump the run and event number to csv to use as input to larsoft filter
     data_scores[['run','subrun','event','trackid'
@@ -83,26 +92,4 @@ for i in range(len(data_others)):
 plt.savefig( "/Users/erezcohen/Desktop/test_score_vs_pdg_" + ModelName + ".pdf" )
 plt.show()
 
-                                                       
-
-#                                                       
-#                                                       
-## (C) plot scores vs. actual mc code
-## ---------------------------------------
-#bins = np.linspace(0, 1, 100)
-#plt.figure()
-#plt.hist( protons['pscore'] , bins , color='blue' , alpha=0.5, label='protons')
-#plt.hist( pions['pscore'] , bins , color='green' , alpha=0.5, label=r'$\pi^{\pm,0}$')
-#plt.hist( muons['pscore'] , bins , color='black' , alpha=0.5, label=r'$\mu^{\pm}$')
-#plt.hist( em['pscore'] , bins , color='red' , alpha=0.5, label=r'e$^{\pm}$/$\gamma$')
-#plt.hist( unknown['pscore'] , bins , color='purple' , alpha=0.5, label=r'-9999')
-#plt.title("score vs. true pdg code")
-#plt.xlabel("score")
-#plt.ylabel("frequency")
-#plt.legend(loc='upper right')
-#plt.savefig( "/Users/erezcohen/Desktop/test_score_vs_pdg_" + ModelName + ".pdf" )
-#plt.show()
-
-
-
-
+     
