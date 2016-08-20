@@ -40,7 +40,7 @@ elif flags.worker=="uboone":
 
 
 SampleName          = Path+"/FeaturesFiles/features_" + ListName + ".csv"
-PassedGBDTFileName  = Path+"/PassedGBDTFiles" + "/" +ListName + "/" + "passedGBDT_"+ListName+"_"+ModelName+"_allscores.csv"
+PassedGBDTFileName  = Path+"/PassedGBDTFiles" + "/" +ListName+"_"+ModelName + "/" + "passedGBDT_"+ListName+"_"+ModelName+"_allscores.csv"
 
 try:
     os.makedirs(Path+"/PassedGBDTFiles/"+ListName+"_"+ModelName)
