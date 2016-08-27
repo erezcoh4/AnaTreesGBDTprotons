@@ -21,10 +21,12 @@ flags = input_flags.get_args()
 
 
 
-ListName    = "small_20_files_extBNB_AnalysisTrees" if flags.verbose>4 else "extBNB_AnalysisTrees"
-# small_20_files_extBNB_AnalysisTrees is for monitoring....
+ListName    = "extBNB_AnalysisTrees"
 ModelName   = "cosmic_trained_only_on_mc"
 
+
+if flags.verbose>4: # for debuging
+        ListName    = "smallfileslist_" + ListName
 
 if flags.worker=="erez":
 
@@ -57,10 +59,11 @@ if flags.verbose>0: print "predicted to %d tracks"%len(data)
 
 
 # now dump the run and event number to csv to use as input to larsoft filter
-data_scores[['run','subrun','event','trackid'
-             ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
-             ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
-             ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
-             ,'pscore' ]].to_csv(PassedGBDTFileName,header=False,index=False,sep=' ')
+#data_scores[['run','subrun','event','trackid'
+#             ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
+#             ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
+#             ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
+#             ,'score' ]].to_csv(PassedGBDTFileName,header=False,index=False,sep=' ')
+data_scores.to_csv(PassedGBDTFileName,header=False,index=False,sep=' ')
 
 print "written csv file of all scores:\n" + PassedGBDTFileName

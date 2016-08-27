@@ -61,7 +61,7 @@ namespace ROOT {
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::calcAnaTree));
       static ::ROOT::TGenericClassInfo 
          instance("calcAnaTree", "calcAnaTree.h", 30,
-                  typeid(::calcAnaTree), DefineBehavior(ptr, ptr),
+                  typeid(::calcAnaTree), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &calcAnaTree_Dictionary, isa_proxy, 4,
                   sizeof(::calcAnaTree) );
       instance.SetNew(&new_calcAnaTree);
@@ -106,7 +106,7 @@ namespace ROOT {
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::box));
       static ::ROOT::TGenericClassInfo 
          instance("box", "PandoraNuTrack.h", 31,
-                  typeid(::box), DefineBehavior(ptr, ptr),
+                  typeid(::box), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &box_Dictionary, isa_proxy, 4,
                   sizeof(::box) );
       instance.SetNew(&new_box);
@@ -151,7 +151,7 @@ namespace ROOT {
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::PandoraNuTrack));
       static ::ROOT::TGenericClassInfo 
          instance("PandoraNuTrack", "PandoraNuTrack.h", 68,
-                  typeid(::PandoraNuTrack), DefineBehavior(ptr, ptr),
+                  typeid(::PandoraNuTrack), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &PandoraNuTrack_Dictionary, isa_proxy, 4,
                   sizeof(::PandoraNuTrack) );
       instance.SetNew(&new_PandoraNuTrack);
@@ -196,7 +196,7 @@ namespace ROOT {
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::AnaTreeTools));
       static ::ROOT::TGenericClassInfo 
          instance("AnaTreeTools", "AnaTreeTools.h", 51,
-                  typeid(::AnaTreeTools), DefineBehavior(ptr, ptr),
+                  typeid(::AnaTreeTools), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &AnaTreeTools_Dictionary, isa_proxy, 4,
                   sizeof(::AnaTreeTools) );
       instance.SetNew(&new_AnaTreeTools);
@@ -324,8 +324,8 @@ namespace ROOT {
       vector<int> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<int>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<int>", -2, "vector", 457,
-                  typeid(vector<int>), DefineBehavior(ptr, ptr),
+         instance("vector<int>", -2, "vector", 477,
+                  typeid(vector<int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEintgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<int>) );
       instance.SetNew(&new_vectorlEintgR);
@@ -354,10 +354,10 @@ namespace ROOT {
 namespace ROOT {
    // Wrappers around operator new
    static void *new_vectorlEintgR(void *p) {
-      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<int> : new vector<int>;
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<int> : new vector<int>;
    }
    static void *newArray_vectorlEintgR(Long_t nElements, void *p) {
-      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<int>[nElements] : new vector<int>[nElements];
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<int>[nElements] : new vector<int>[nElements];
    }
    // Wrapper around operator delete
    static void delete_vectorlEintgR(void *p) {
@@ -387,8 +387,8 @@ namespace ROOT {
       vector<float> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<float>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<float>", -2, "vector", 457,
-                  typeid(vector<float>), DefineBehavior(ptr, ptr),
+         instance("vector<float>", -2, "vector", 477,
+                  typeid(vector<float>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEfloatgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<float>) );
       instance.SetNew(&new_vectorlEfloatgR);
@@ -417,10 +417,10 @@ namespace ROOT {
 namespace ROOT {
    // Wrappers around operator new
    static void *new_vectorlEfloatgR(void *p) {
-      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<float> : new vector<float>;
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<float> : new vector<float>;
    }
    static void *newArray_vectorlEfloatgR(Long_t nElements, void *p) {
-      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<float>[nElements] : new vector<float>[nElements];
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<float>[nElements] : new vector<float>[nElements];
    }
    // Wrapper around operator delete
    static void delete_vectorlEfloatgR(void *p) {
@@ -450,8 +450,8 @@ namespace ROOT {
       vector<PandoraNuTrack> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<PandoraNuTrack>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<PandoraNuTrack>", -2, "vector", 457,
-                  typeid(vector<PandoraNuTrack>), DefineBehavior(ptr, ptr),
+         instance("vector<PandoraNuTrack>", -2, "vector", 477,
+                  typeid(vector<PandoraNuTrack>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEPandoraNuTrackgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<PandoraNuTrack>) );
       instance.SetNew(&new_vectorlEPandoraNuTrackgR);
@@ -480,10 +480,10 @@ namespace ROOT {
 namespace ROOT {
    // Wrappers around operator new
    static void *new_vectorlEPandoraNuTrackgR(void *p) {
-      return  p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<PandoraNuTrack> : new vector<PandoraNuTrack>;
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<PandoraNuTrack> : new vector<PandoraNuTrack>;
    }
    static void *newArray_vectorlEPandoraNuTrackgR(Long_t nElements, void *p) {
-      return p ? ::new((::ROOT::TOperatorNewHelper*)p) vector<PandoraNuTrack>[nElements] : new vector<PandoraNuTrack>[nElements];
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<PandoraNuTrack>[nElements] : new vector<PandoraNuTrack>[nElements];
    }
    // Wrapper around operator delete
    static void delete_vectorlEPandoraNuTrackgR(void *p) {
@@ -512,12 +512,12 @@ namespace {
 "/Users/erezcohen/larlite/UserDev/MyLarLite/MyPackage",
 "/Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo",
 "/Users/erezcohen/larlite/core",
-"/Users/erezcohen/root6/root-6.04.10/include",
+"/usr/local/Cellar/root6/6.06.02/include/root",
 "/Users/erezcohen/larlite/UserDev/AnaTreesGBDTprotons/GBDTprotonsPackage/",
 0
     };
-    static const char* fwdDeclCode = 
-R"DICTFWDDCLS(
+    static const char* fwdDeclCode = R"DICTFWDDCLS(
+#line 1 "libAnaTreesGBDTprotons_GBDTprotonsPackage dictionary forward declarations' payload"
 #pragma clang diagnostic ignored "-Wkeyword-compat"
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
@@ -528,6 +528,7 @@ class __attribute__((annotate("$clingAutoload$PandoraNuTrack.h")))  PandoraNuTra
 class __attribute__((annotate("$clingAutoload$AnaTreeTools.h")))  AnaTreeTools;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
+#line 1 "libAnaTreesGBDTprotons_GBDTprotonsPackage dictionary payload"
 
 #ifndef G__VECTOR_HAS_CLASS_ITERATOR
   #define G__VECTOR_HAS_CLASS_ITERATOR 1
