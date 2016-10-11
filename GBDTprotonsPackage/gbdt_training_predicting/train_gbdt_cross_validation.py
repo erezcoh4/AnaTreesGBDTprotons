@@ -1,3 +1,8 @@
+'''
+    usage:
+    ---------
+    > python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
+    '''
 
 import ROOT ,os, sys , math , time
 import matplotlib.pyplot as plt
@@ -10,12 +15,6 @@ flags = input_flags.get_args()
 
 
 
-
-'''
-    usage:
-    ---------
-    > python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
-    '''
 
 
 ModelName = "cosmic_trained_only_on_mc"
@@ -40,7 +39,7 @@ param['debug']              = flags.verbose     # just for monitoring....
     use logistic regression loss, use raw prediction before logistic transformation
     since we only need the rank cosmic data parameters
 '''
-param['objective'] = 'binary:logistic'
+param['objective']          = 'binary:logistic'
 param['eta']                = 0.025
 param['eval_metric']        = 'error'
 param['silent']             = 1
@@ -48,7 +47,7 @@ param['nthread']            = 6
 param['min_child_weight']   = 4
 param['max_depth']          = 13
 param['gamma']              = 0.7
-param['colsample_bytree']   = 0.5   # Kat: 0.5
+param['colsample_bytree']   = 0.5    # Kat: 0.5
 param['subsample']          = 0.8
 param['Ntrees']             = 500    # Kat: 500
 param['Nfolds']             = 10     # Kat: 10

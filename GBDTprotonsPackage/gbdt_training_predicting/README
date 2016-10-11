@@ -1,0 +1,38 @@
+procedure:
+----------
+
+    (1) divide training/testing
+    
+    > python gbdt_training_predicting/divide_training_and_testing_samples.py -werez
+    
+    comments: File to divide and number of events in the sample are hard-coded
+    ---------------------------------------------------------------------------------------------------------
+
+
+    (2) train GBDTs
+    
+    > python gbdt_training_predicting/train_gbdt_cross_validation.py -werez
+    
+    comments: Training at protonid/boost_cosmic.py::load_data(), where protons are labled by MCpdgCode = 2212
+    ---------------------------------------------------------------------------------------------------------
+
+
+
+    (3) test GBDTs on MC
+    
+    > python gbdt_training_predicting/test_gbdt_on_mc.py -werez
+    ---------------------------------------------------------------------------------------------------------
+
+
+
+    (4) calc all GBDTs scores for protons in a data set
+
+    > python gbdt_training_predicting/calc_all_gbdt_scores.py -werez
+    ---------------------------------------------------------------------------------------------------------
+
+
+
+    (5) cut on a specific score: choose only protons with score equal or greater X
+
+    > python gbdt_training_predicting/cut_a_gbdt_score.py -werez
+    ---------------------------------------------------------------------------------------------------------
