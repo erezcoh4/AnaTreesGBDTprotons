@@ -1,7 +1,7 @@
 '''
     usage:
     ----------
-    python mac/extract_anatrees_tracks_information_from_files_list.py -wuboone --DataType=extBNB --files_frac=0.001 --evnts_frac=0.1 -v4 -p1
+    python $macGBDTprotons/extract_anatrees_tracks_information_from_files_list.py -wuboone --DataType=extBNB --files_frac=0.001 --evnts_frac=0.1 -v4 -p1
     
     last edited: October 14, 2016 (Erez)
 '''
@@ -17,16 +17,16 @@ flags = input_flags.get_args()
 
 
 Path            = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna"    if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
-ListsPath       = Path+"/lists"
+ListsPath       = Path+"/lists/AnalysisTreesLists"
 AnaPath         = Path+"/BDTanaFiles"
 CSVFilesPath    = Path+"/FeaturesFiles"
-ListName        = flags.DataType + "_AnalysisTrees" # options: openCOSMIC_MC / extBNB
+ListName        = flags.DataType + "_AnalysisTrees" # options: openCOSMIC_MC / extBNB / MC_BNB / BNB (not yet??)
 MCmode          = True if 'MC' in flags.DataType else False
 tools           = AnaTreeTools()
 
 
 if flags.verbose>0: print "\nreading list of files..."
-with open(ListsPath + "/" + ListName + ".list") as f:
+with open(ListsPath  + "/" + ListName + ".list") as f:
     files = f.read().splitlines()
 if flags.verbose>4: print files
 
