@@ -84,3 +84,9 @@ flags:
 
 
 
+
+# Oct-14,2016
+To start collecting data use 
+
+
+

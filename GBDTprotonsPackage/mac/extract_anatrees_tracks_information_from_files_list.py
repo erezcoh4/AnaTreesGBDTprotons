@@ -1,3 +1,11 @@
+'''
+    usage:
+    ----------
+    python mac/extract_anatrees_tracks_information_from_files_list.py -wuboone --DataType=extBNB --files_frac=0.001 --evnts_frac=0.1 -v4 -p1
+    
+    last edited: October 14, 2016 (Erez)
+'''
+
 import ROOT , os , sys, larlite, argparse
 from ROOT import *
 from ROOT import calcAnaTree
@@ -12,9 +20,8 @@ Path            = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna"    if flags
 ListsPath       = Path+"/lists"
 AnaPath         = Path+"/BDTanaFiles"
 CSVFilesPath    = Path+"/FeaturesFiles"
-ListName        = "openCOSMIC_MC_AnalysisTrees"                         if flags.DataType=='MC' else "extBNB_AnalysisTrees"
-MCmode          = True if flags.DataType=='MC' else False
-#"small_20_files_extBNB_AnalysisTrees" # "extBNB_AnalysisTrees" # openCOSMIC_MC_AnalysisTrees
+ListName        = flags.DataType + "_AnalysisTrees" # options: openCOSMIC_MC / extBNB
+MCmode          = True if 'MC' in flags.DataType else False
 tools           = AnaTreeTools()
 
 
