@@ -1,8 +1,8 @@
 '''
     usage:
     ---------
-    > python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
-    '''
+    python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
+'''
 
 import ROOT ,os, sys , math , time
 import matplotlib.pyplot as plt
@@ -16,11 +16,20 @@ flags = input_flags.get_args()
 
 
 
-
+'''
+    application on beam-off data, training on cosmic MC
+    ----------------------------------------------------
 ModelName = "cosmic_trained_only_on_mc"
-TrainingSample = "200000_tracks_openCOSMIC_MC_AnalysisTrees"
+TrainingSample = "200000_tracks_openCOSMIC_MC"
+'''
+
+ModelName = "BNB_TrainedOn_only_MC_BNB" # ToDo: Change this to add training on cosmic-data as 'bad' signal as well
+TrainingSample = "300000_tracks_MC_BNB"
+
+
+
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
-TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + ".csv"
+TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + "_AnalysisTrees.csv"
 model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/uboone/app/users/ecohen/") +"AnalysisTreesAna/GBDTmodels"
 
 
@@ -29,8 +38,8 @@ feature_names = [
                  'nhits','length','starty','startz','endy','endz','theta','phi', 'distlenratio',    # geometry
                  'startdqdx','enddqdx','dqdxdiff','dqdxratio','totaldqdx','averagedqdx',            # calorimetry
                  'cosmicscore','coscontscore','pidpida','pidchi'                                    # uboonecode tagging and PID
+                 'cfdistance'                                                                       # optical information - unused for open cosmic MC
                  ]
-#                 'cfdistance'                                                     # optical information - unused for open cosmic MC
 
 
 param = {}

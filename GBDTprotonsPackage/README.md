@@ -86,7 +86,35 @@ flags:
 
 
 # Oct-14,2016
-To start collecting data use 
+To start collecting data use
+
+    python $macGBDTprotons/extract_anatrees_tracks_information_from_files_list.py -wuboone --DataType=extBNB --files_frac=0.001 --evnts_frac=0.1 -v4 -p1
+
+(on the grid)
+if this is MC data used for building the GBDTs, divide it to training and testing samples
+
+    python $macGBDTprotons/divide_training_and_testing_samples.py -werez
+
+now, we can train the GBDTs using Cross-Validation
+
+    python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

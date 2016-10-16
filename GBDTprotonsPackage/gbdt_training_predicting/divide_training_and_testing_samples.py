@@ -1,7 +1,7 @@
 '''
     usage:
     ---------
-    > python gbdt_training_predicting/divide_training_and_testing_samples.py -werez -v1
+    python gbdt_training_predicting/divide_training_and_testing_samples.py -werez -v1
 '''
 
 import sys
@@ -13,18 +13,19 @@ flags = input_flags.get_args()
 
 
 
-
-FileToDivide  = "openCOSMIC_MC_AnalysisTrees"
-NumberToTrain = 200000
+# for openCOSMIC_MC_AnalysisTrees we have 255k tracks in the MC
+# for MC_BNB we have 387k tracks in the MC
+FileToDivide  = "MC_BNB" # options: MC_BNB , openCOSMIC_MC
+NumberToTrain = 300000
 
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
-DivideFileName = Path+"/FeaturesFiles/features_" + FileToDivide + ".csv"
+DivideFileName = Path+"/FeaturesFiles/features_" + FileToDivide + "_AnalysisTrees.csv"
 
 data = pd.read_csv(DivideFileName)
 Total = len(data)
 TrainFileName = Path+"/TrainingSamples/trainsample_" + "%d_tracks_"%NumberToTrain + FileToDivide + ".csv"
 TestFileName = Path+"/TestSamples/testsample_" + "%d_tracks_"%(Total-NumberToTrain) + FileToDivide + ".csv"
-if (flags.verbose>0): print "\n%d events in the sample, dividing to %d for training and %d for testing\n"%(Total,NumberToTrain,Total-NumberToTrain)
+if (flags.verbose>0): print "\n%d events in the %s sample, dividing to %d for training and %d for testing\n"%(Total,FileToDivide,NumberToTrain,Total-NumberToTrain)
 
 
 rows         = random.sample( data.index, NumberToTrain )
