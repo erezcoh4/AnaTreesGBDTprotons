@@ -19,8 +19,14 @@ flags = input_flags.get_args()
 '''
     application on beam-off data, training on cosmic MC
     ----------------------------------------------------
-ModelName = "cosmic_trained_only_on_mc"
-TrainingSample = "200000_tracks_openCOSMIC_MC"
+    ModelName = "cosmic_trained_only_on_mc"
+    TrainingSample = "200000_tracks_openCOSMIC_MC"
+
+    application on beam-on data, training only on MC-BNB
+    ----------------------------------------------------
+    ModelName = "BNB_TrainedOn_only_MC_BNB"
+    TrainingSample = "300000_tracks_MC_BNB"
+
 '''
 
 ModelName = "BNB_TrainedOn_only_MC_BNB" # ToDo: Change this to add training on cosmic-data as 'bad' signal as well
@@ -32,15 +38,7 @@ Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez
 TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + ".csv"
 model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/uboone/app/users/ecohen/") +"AnalysisTreesAna/GBDTmodels"
 
-
-# The features that we want to use for the GBDT
-feature_names = [
-                 'nhits','length','starty','startz','endy','endz','theta','phi', 'distlenratio'    # geometry
-                 ,'startdqdx','enddqdx','dqdxdiff','dqdxratio','totaldqdx','averagedqdx'            # calorimetry
-                 ,'cosmicscore','coscontscore','pidpida','pidchi'                                    # uboonecode tagging and PID
-                 ,'cfdistance'                                                                       # optical information - unused for open cosmic MC
-                 ]
-
+from definitions import feature_names
 
 param = {}
 param['debug']              = flags.verbose     # just for monitoring....
@@ -142,7 +140,7 @@ file = open ( model_path + "/README_" + ModelName   , "wb" )
 
 string =        "\nGBDT modeling \n--------------------- \n"
 string+=        ("built the model to \n " + model_path + "/" + ModelName + ".bst") if DoContinue else "did not built the model..."
-string+=        "%4d-%02d-%02d"       %time.localtime()[0:3]
+string+=        "\n%4d-%02d-%02d"       %time.localtime()[0:3]
 string+=        "\n--------------------- \n"
 string+=        "\nmodel: "             +ModelName
 string+=        "\nobjective: "         +param['objective']

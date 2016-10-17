@@ -3,8 +3,8 @@
 '''
     usage:
     ---------
-    > python gbdt_training_predicting/test_gbdt_on_mc.py -werez -v1
-    '''
+    python gbdt_training_predicting/test_gbdt_on_mc.py -werez -v1
+'''
 
 
 import ROOT ,os, sys , math , time
@@ -17,12 +17,28 @@ import predict_cosmic
 sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
+from prompter import yesno
 
 
 
+'''
 
-ModelName = "cosmic_trained_only_on_mc"
-TestSample = "55650_tracks_openCOSMIC_MC_AnalysisTrees"
+    application on beam-off data, training on cosmic MC
+    ----------------------------------------------------
+    ModelName = "cosmic_trained_only_on_mc"
+    TestSample = "55650_tracks_openCOSMIC_MC_AnalysisTrees"
+
+    application on beam-on data, training only on MC-BNB
+    ----------------------------------------------------
+    ModelName = "BNB_TrainedOn_only_MC_BNB"
+    TestSample = "87789_tracks_MC_BNB"
+
+'''
+
+ModelName = "BNB_TrainedOn_only_MC_BNB" # ToDo: Change this to add training on cosmic-data as 'bad' signal as well
+TestSample = "87789_tracks_MC_BNB"
+
+
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
 TestSampleName = Path+"/TestSamples/testsample_" + TestSample + ".csv"
 TestSampleScoresName = Path+"/TestSamples/testsample_" + TestSample + "_with_predicted_scores.csv"
@@ -33,8 +49,8 @@ model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/
 
 # (A) load the test sample data and the model
 # ---------------------------------------
-AskPredict = int(input("predict on MC? \n( yes-1 / no-0 ):\n > "))
-DoPredict = True if AskPredict==1 else False
+DoPredict = yesno('predict on MC?')
+
 
 if (DoPredict):
 
@@ -46,14 +62,16 @@ if (DoPredict):
 
     # (B) predict on the MC data
     # ---------------------------------------
-    data_scores = predict_cosmic.predict_data( data , model_path + "/" + ModelName + ".bst" )
+    from definitions import feature_names
+    print "feature_names: ",feature_names
+    data_scores = predict_cosmic.predict_data( data , model_path + "/" + ModelName + ".bst" , feature_names )
     # now dump the run and event number to csv to use as input to larsoft filter
     data_scores[['run','subrun','event','trackid'
                  ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
                  ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
                  ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
                  ,'MCpdgCode'
-                 ,'pscore' ]].to_csv( TestSampleScoresName)
+                 ,'p_score' ]].to_csv( TestSampleScoresName)
     print "predicted scores and saved into \n"+ TestSampleScoresName
 
 else:
@@ -81,8 +99,8 @@ plt.figure()
 for i in range(len(data_others)):
     
     plt.subplot(2,2,i+1)
-    plt.hist( protons['pscore'] , bins , color='blue' , alpha=0.5, normed = 100, label='protons')
-    plt.hist( data_others[i]['pscore'] , bins , color=cols_others[i] , alpha=0.5, normed = 100, label=titl_others[i])
+    plt.hist( protons['p_score'] , bins , color='blue' , alpha=0.5, normed = 100, label='protons')
+    plt.hist( data_others[i]['p_score'] , bins , color=cols_others[i] , alpha=0.5, normed = 100, label=titl_others[i])
     plt.title("protons vs. "+titl_others[i])
     plt.xlabel("score")
     plt.ylabel("frequency [%]")

@@ -9,14 +9,30 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /usr/include/sys/_types/_off_t.h /usr/include/sys/_types/_ssize_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_seek_set.h /usr/include/_types/_uint64_t.h \
+  /usr/include/sys/_types/_uid_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_intptr_t.h /usr/include/sys/_types/_pid_t.h \
+  /usr/include/sys/_types/_useconds_t.h /usr/include/sys/select.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_timespec.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_sigset_t.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_isset.h /usr/include/sys/_types/_fd_zero.h \
+  /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
   /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
   /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
   /usr/include/sys/_types/_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdarg.h \
   /usr/include/time.h /usr/include/sys/_types/_clock_t.h \
-  /usr/include/sys/_types/_time_t.h /usr/include/sys/_types/_timespec.h \
   /usr/include/_wctype.h /usr/include/sys/_types/_wint_t.h \
   /usr/include/_types/_wctype_t.h /usr/include/ctype.h \
   /usr/include/runetype.h \
@@ -32,8 +48,8 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
@@ -41,16 +57,14 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdint.h \
   /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
   /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
   /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
   /usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef___deallocate \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_min_max \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
@@ -65,7 +79,7 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
   /usr/include/i386/limits.h /usr/include/i386/_limits.h \
   /usr/include/sys/syslimits.h \
@@ -84,7 +98,6 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
   /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
-  /usr/include/sys/_types/_sigset_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
   /usr/include/locale.h /usr/include/_locale.h /usr/include/xlocale.h \
   /usr/include/_xlocale.h /usr/include/xlocale/_ctype.h \
@@ -97,34 +110,24 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
   /usr/include/machine/signal.h /usr/include/i386/signal.h \
   /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
   /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_ucontext.h /usr/include/sys/resource.h \
   /usr/include/machine/endian.h /usr/include/i386/endian.h \
   /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
   /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
-  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   /usr/include/xlocale/_stdlib.h /usr/include/nl_types.h \
   /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_blksize_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
@@ -132,102 +135,117 @@ AnaTreeTools.o: AnaTreeTools.cxx AnaTreeTools.h /usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/fstream \
-  /Users/erezcohen/root6/root-6.04.10/include/TFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectoryFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectory.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TNamed.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RtypesCore.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfig.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RVersion.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectoryFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectory.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TNamed.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RtypesCore.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfig.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RVersion.h \
   /usr/include/AvailabilityMacros.h /usr/include/TargetConditionals.h \
-  /Users/erezcohen/root6/root-6.04.10/include/DllImport.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypeinfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/snprintf.h \
-  /Users/erezcohen/root6/root-6.04.10/include/strlcpy.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGenericClassInfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSchemaHelper.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVersionCheck.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Riosfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBuffer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TString.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMathBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/DllImport.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypeinfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/snprintf.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/strlcpy.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGenericClassInfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSchemaHelper.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVersionCheck.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Riosfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBuffer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMathBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
   /usr/include/math.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RStringView.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfigure.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RStringView.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfigure.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iomanip \
-  /Users/erezcohen/root6/root-6.04.10/include/TList.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSeqCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TIterator.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDatime.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUUID.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMap.h \
-  /Users/erezcohen/root6/root-6.04.10/include/THashTable.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUrl.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TTree.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBranch.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttFill.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDataType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDictionary.h \
-  /Users/erezcohen/root6/root-6.04.10/include/ESTLType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttLine.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttMarker.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayD.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayI.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TClass.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TList.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSeqCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TIterator.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDatime.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUUID.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMap.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/THashTable.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUrl.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TTree.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBranch.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttFill.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDataType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDictionary.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ESTLType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttLine.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttMarker.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayD.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayI.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TClass.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjString.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__hash_table \
-  /Users/erezcohen/root6/root-6.04.10/include/ThreadLocalStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualTreePlayer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector3.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TError.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector2.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrix.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixF.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixT.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTBase.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixDBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorDfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtilsfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMath.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/float.h
+  /usr/local/Cellar/root6/6.06.02/include/root/ThreadLocalStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualTreePlayer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector3.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TError.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector2.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrix.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixF.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixT.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixDBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorDfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtilsfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMath.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/float.h
 MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
-  /usr/include/wchar.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/unistd.h /usr/include/_types.h /usr/include/sys/_types.h \
   /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
   /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
-  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
-  /usr/include/sys/_types/_null.h /usr/include/sys/_types/_size_t.h \
-  /usr/include/sys/_types/_mbstate_t.h \
+  /usr/include/sys/unistd.h /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_size_t.h \
+  /usr/include/_types/_uint64_t.h /usr/include/Availability.h \
+  /usr/include/AvailabilityInternal.h /usr/include/sys/_types/_ssize_t.h \
+  /usr/include/sys/_types/_uid_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_intptr_t.h /usr/include/sys/_types/_off_t.h \
+  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_useconds_t.h \
+  /usr/include/sys/_types/_null.h /usr/include/sys/select.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_timespec.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_sigset_t.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_isset.h /usr/include/sys/_types/_fd_zero.h \
+  /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
+  /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
   /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
   /usr/include/sys/_types/_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdarg.h \
   /usr/include/stdio.h /usr/include/sys/_types/_va_list.h \
-  /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h \
-  /usr/include/sys/_types/_ssize_t.h /usr/include/time.h \
-  /usr/include/sys/_types/_clock_t.h /usr/include/sys/_types/_time_t.h \
-  /usr/include/sys/_types/_timespec.h /usr/include/_wctype.h \
+  /usr/include/sys/stdio.h /usr/include/time.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/_wctype.h \
   /usr/include/sys/_types/_wint_t.h /usr/include/_types/_wctype_t.h \
   /usr/include/ctype.h /usr/include/runetype.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__locale \
@@ -242,8 +260,8 @@ MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
@@ -251,16 +269,14 @@ MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdint.h \
   /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
   /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
   /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
   /usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef___deallocate \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_min_max \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
@@ -275,7 +291,7 @@ MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
   /usr/include/i386/limits.h /usr/include/i386/_limits.h \
   /usr/include/sys/syslimits.h \
@@ -294,7 +310,6 @@ MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
   /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
-  /usr/include/sys/_types/_sigset_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
   /usr/include/locale.h /usr/include/_locale.h /usr/include/xlocale.h \
   /usr/include/_xlocale.h /usr/include/xlocale/_ctype.h \
@@ -307,139 +322,142 @@ MyLArTools.o: MyLArTools.cxx MyLArTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
   /usr/include/machine/signal.h /usr/include/i386/signal.h \
   /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
   /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_ucontext.h /usr/include/sys/resource.h \
   /usr/include/machine/endian.h /usr/include/i386/endian.h \
   /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
   /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
-  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   /usr/include/xlocale/_stdlib.h /usr/include/nl_types.h \
   /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_blksize_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/erezcohen/root6/root-6.04.10/include/TGraph.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TNamed.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RtypesCore.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfig.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RVersion.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGraph.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TNamed.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RtypesCore.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfig.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RVersion.h \
   /usr/include/AvailabilityMacros.h /usr/include/TargetConditionals.h \
-  /Users/erezcohen/root6/root-6.04.10/include/DllImport.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypeinfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/snprintf.h \
-  /Users/erezcohen/root6/root-6.04.10/include/strlcpy.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGenericClassInfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/DllImport.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypeinfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/snprintf.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/strlcpy.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGenericClassInfo.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/erezcohen/root6/root-6.04.10/include/TSchemaHelper.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVersionCheck.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Riosfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBuffer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TString.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMathBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSchemaHelper.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVersionCheck.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Riosfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBuffer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMathBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
   /usr/include/math.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RStringView.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfigure.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RStringView.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfigure.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iomanip \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttLine.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttFill.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttMarker.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorDfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TFitResultPtr.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSpline.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualX.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttText.h \
-  /Users/erezcohen/root6/root-6.04.10/include/GuiTypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Buttons.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TList.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSeqCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TIterator.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObjectEmitVA.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQConnection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Varargs.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TInterpreter.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDictionary.h \
-  /Users/erezcohen/root6/root-6.04.10/include/ESTLType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualMutex.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttBBox2D.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPoint.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvasImp.h
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttLine.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttFill.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttMarker.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorDfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFitResultPtr.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSpline.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualX.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttText.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/GuiTypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Buttons.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TList.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSeqCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TIterator.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObjectEmitVA.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQConnection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Varargs.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TInterpreter.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDictionary.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ESTLType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualMutex.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttBBox2D.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPoint.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvasImp.h
 PandoraNuTrack.o: PandoraNuTrack.cxx PandoraNuTrack.h \
   /Users/erezcohen/larlite/core/LArUtil/Geometry.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
+  /usr/include/unistd.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
+  /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
+  /usr/include/sys/unistd.h /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_seek_set.h /usr/include/sys/_types/_size_t.h \
+  /usr/include/_types/_uint64_t.h /usr/include/Availability.h \
+  /usr/include/AvailabilityInternal.h /usr/include/sys/_types/_ssize_t.h \
+  /usr/include/sys/_types/_uid_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_intptr_t.h /usr/include/sys/_types/_off_t.h \
+  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_useconds_t.h \
+  /usr/include/sys/_types/_null.h /usr/include/sys/select.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_timespec.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_sigset_t.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_isset.h /usr/include/sys/_types/_fd_zero.h \
+  /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdint.h \
   /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
   /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
   /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types.h \
-  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
-  /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
-  /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
-  /usr/include/sys/_types/_intptr_t.h \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
   /usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef___deallocate \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
-  /usr/include/wchar.h /usr/include/_types.h /usr/include/Availability.h \
-  /usr/include/AvailabilityInternal.h /usr/include/sys/_types/_null.h \
-  /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_mbstate_t.h \
+  /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
   /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
   /usr/include/sys/_types/_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdarg.h \
   /usr/include/stdio.h /usr/include/sys/_types/_va_list.h \
-  /usr/include/sys/stdio.h /usr/include/sys/_types/_off_t.h \
-  /usr/include/sys/_types/_ssize_t.h /usr/include/time.h \
-  /usr/include/sys/_types/_clock_t.h /usr/include/sys/_types/_time_t.h \
-  /usr/include/sys/_types/_timespec.h /usr/include/_wctype.h \
+  /usr/include/sys/stdio.h /usr/include/time.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/_wctype.h \
   /usr/include/sys/_types/_wint_t.h /usr/include/_types/_wctype_t.h \
   /usr/include/ctype.h /usr/include/runetype.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
@@ -472,7 +490,7 @@ PandoraNuTrack.o: PandoraNuTrack.cxx PandoraNuTrack.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
   /usr/include/i386/limits.h /usr/include/i386/_limits.h \
   /usr/include/sys/syslimits.h \
@@ -491,107 +509,96 @@ PandoraNuTrack.o: PandoraNuTrack.cxx PandoraNuTrack.h \
   /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
   /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
-  /usr/include/sys/_types/_sigset_t.h /usr/include/locale.h \
-  /usr/include/_locale.h /usr/include/xlocale.h /usr/include/_xlocale.h \
-  /usr/include/xlocale/_ctype.h /usr/include/xlocale/__wctype.h \
-  /usr/include/xlocale/_stdio.h /usr/include/xlocale/_string.h \
-  /usr/include/xlocale/_time.h /usr/include/xlocale/_wchar.h \
-  /usr/include/xlocale/_wctype.h \
+  /usr/include/locale.h /usr/include/_locale.h /usr/include/xlocale.h \
+  /usr/include/_xlocale.h /usr/include/xlocale/_ctype.h \
+  /usr/include/xlocale/__wctype.h /usr/include/xlocale/_stdio.h \
+  /usr/include/xlocale/_string.h /usr/include/xlocale/_time.h \
+  /usr/include/xlocale/_wchar.h /usr/include/xlocale/_wctype.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/streambuf \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
   /usr/include/machine/signal.h /usr/include/i386/signal.h \
   /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
   /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_ucontext.h /usr/include/sys/resource.h \
   /usr/include/machine/endian.h /usr/include/i386/endian.h \
   /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
   /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
-  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   /usr/include/xlocale/_stdlib.h /usr/include/nl_types.h \
   /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_blksize_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/istream \
-  /Users/erezcohen/root6/root-6.04.10/include/TChain.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TTree.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBranch.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TNamed.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RtypesCore.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfig.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RVersion.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TChain.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TTree.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBranch.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TNamed.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RtypesCore.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfig.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RVersion.h \
   /usr/include/AvailabilityMacros.h /usr/include/TargetConditionals.h \
-  /Users/erezcohen/root6/root-6.04.10/include/DllImport.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypeinfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/snprintf.h \
-  /Users/erezcohen/root6/root-6.04.10/include/strlcpy.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGenericClassInfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/DllImport.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypeinfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/snprintf.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/strlcpy.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGenericClassInfo.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/erezcohen/root6/root-6.04.10/include/TSchemaHelper.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVersionCheck.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Riosfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBuffer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TString.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMathBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSchemaHelper.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVersionCheck.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Riosfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBuffer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMathBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
   /usr/include/math.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RStringView.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfigure.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RStringView.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfigure.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iomanip \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSeqCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TIterator.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttFill.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDataType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDictionary.h \
-  /Users/erezcohen/root6/root-6.04.10/include/ESTLType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttLine.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttMarker.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayD.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayI.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TClass.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSeqCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TIterator.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttFill.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDataType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDictionary.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ESTLType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttLine.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttMarker.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayD.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayI.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TClass.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjString.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__hash_table \
-  /Users/erezcohen/root6/root-6.04.10/include/ThreadLocalStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualTreePlayer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ThreadLocalStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualTreePlayer.h \
   /Users/erezcohen/larlite/core/Base/Base-TypeDef.h \
   /Users/erezcohen/larlite/core/Base/DataFormatConstants.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TROOT.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectory.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TList.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDatime.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUUID.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TROOT.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectory.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TList.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDatime.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUUID.h \
   /Users/erezcohen/larlite/core/Base/FrameworkConstants.h \
   /Users/erezcohen/larlite/core/Base/GeoTypes.h \
   /Users/erezcohen/larlite/core/Base/larlite_base.h \
@@ -601,51 +608,51 @@ PandoraNuTrack.o: PandoraNuTrack.cxx PandoraNuTrack.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilConstants.h \
   /Users/erezcohen/larlite/core/Base/GeoConstants.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilConfig.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMath.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TError.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/float.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector3.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector2.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrix.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixF.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixT.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTBase.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixDBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorDfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtilsfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMath.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TError.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/float.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector3.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector2.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrix.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixF.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixT.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixDBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorDfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtilsfwd.h \
   AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/fstream \
-  /Users/erezcohen/root6/root-6.04.10/include/TFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectoryFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMap.h \
-  /Users/erezcohen/root6/root-6.04.10/include/THashTable.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUrl.h MyLArTools.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGraph.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TFitResultPtr.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSpline.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualX.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttText.h \
-  /Users/erezcohen/root6/root-6.04.10/include/GuiTypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Buttons.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObjectEmitVA.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQConnection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Varargs.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TInterpreter.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualMutex.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttBBox2D.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPoint.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvasImp.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectoryFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMap.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/THashTable.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUrl.h MyLArTools.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGraph.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFitResultPtr.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSpline.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualX.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttText.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/GuiTypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Buttons.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObjectEmitVA.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQConnection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Varargs.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TInterpreter.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualMutex.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttBBox2D.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPoint.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvasImp.h \
   /Users/erezcohen/larlite/core/LArUtil/GeometryHelper.h \
   /Users/erezcohen/larlite/core/LArUtil/PxUtils.h \
   /Users/erezcohen/larlite/core/LArUtil/DetectorProperties.h \
@@ -662,14 +669,30 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /usr/include/sys/_types/_off_t.h /usr/include/sys/_types/_ssize_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/_types/_posix_vdisable.h \
+  /usr/include/sys/_types/_seek_set.h /usr/include/_types/_uint64_t.h \
+  /usr/include/sys/_types/_uid_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_intptr_t.h /usr/include/sys/_types/_pid_t.h \
+  /usr/include/sys/_types/_useconds_t.h /usr/include/sys/select.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/_types/_fd_def.h \
+  /usr/include/sys/_types/_timespec.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_suseconds_t.h \
+  /usr/include/sys/_types/_sigset_t.h \
+  /usr/include/sys/_types/_fd_setsize.h \
+  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
+  /usr/include/sys/_types/_fd_isset.h /usr/include/sys/_types/_fd_zero.h \
+  /usr/include/sys/_types/_fd_copy.h /usr/include/sys/_select.h \
+  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
+  /usr/include/sys/_types/_uuid_t.h /usr/include/gethostuuid.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
   /usr/include/wchar.h /usr/include/sys/_types/_mbstate_t.h \
   /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
   /usr/include/sys/_types/_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdarg.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdarg.h \
   /usr/include/time.h /usr/include/sys/_types/_clock_t.h \
-  /usr/include/sys/_types/_time_t.h /usr/include/sys/_types/_timespec.h \
   /usr/include/_wctype.h /usr/include/sys/_types/_wint_t.h \
   /usr/include/_types/_wctype_t.h /usr/include/ctype.h \
   /usr/include/runetype.h \
@@ -685,8 +708,8 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
@@ -694,16 +717,14 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/stdint.h \
   /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
   /usr/include/sys/_types/_int64_t.h /usr/include/_types/_uint8_t.h \
   /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
-  /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
   /usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef___deallocate \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_min_max \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
@@ -718,7 +739,7 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/limits.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
   /usr/include/i386/limits.h /usr/include/i386/_limits.h \
   /usr/include/sys/syslimits.h \
@@ -737,7 +758,6 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
   /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
   /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
-  /usr/include/sys/_types/_sigset_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
   /usr/include/locale.h /usr/include/_locale.h /usr/include/xlocale.h \
   /usr/include/_xlocale.h /usr/include/xlocale/_ctype.h \
@@ -750,34 +770,24 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/sys/_types/_id_t.h /usr/include/sys/signal.h \
   /usr/include/machine/signal.h /usr/include/i386/signal.h \
   /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
   /usr/include/mach/i386/_structs.h \
   /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
+  /usr/include/sys/_types/_ucontext.h /usr/include/sys/resource.h \
   /usr/include/machine/endian.h /usr/include/i386/endian.h \
   /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
   /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
-  /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h \
   /usr/include/xlocale/_stdlib.h /usr/include/nl_types.h \
   /usr/include/sys/types.h /usr/include/sys/_types/_blkcnt_t.h \
-  /usr/include/sys/_types/_blksize_t.h /usr/include/sys/_types/_gid_t.h \
+  /usr/include/sys/_types/_blksize_t.h \
   /usr/include/sys/_types/_in_addr_t.h \
   /usr/include/sys/_types/_in_port_t.h /usr/include/sys/_types/_ino_t.h \
   /usr/include/sys/_types/_ino64_t.h /usr/include/sys/_types/_key_t.h \
-  /usr/include/sys/_types/_nlink_t.h \
-  /usr/include/sys/_types/_useconds_t.h \
-  /usr/include/sys/_types/_suseconds_t.h \
-  /usr/include/sys/_types/_rsize_t.h /usr/include/sys/_types/_errno_t.h \
-  /usr/include/sys/_types/_fd_def.h \
-  /usr/include/sys/_types/_fd_setsize.h \
-  /usr/include/sys/_types/_fd_set.h /usr/include/sys/_types/_fd_clr.h \
-  /usr/include/sys/_types/_fd_zero.h /usr/include/sys/_types/_fd_isset.h \
-  /usr/include/sys/_types/_fd_copy.h \
+  /usr/include/sys/_types/_nlink_t.h /usr/include/sys/_types/_rsize_t.h \
+  /usr/include/sys/_types/_errno_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bitset \
@@ -785,89 +795,89 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/fstream \
-  /Users/erezcohen/root6/root-6.04.10/include/TFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectoryFile.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDirectory.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TNamed.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RtypesCore.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfig.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RVersion.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectoryFile.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDirectory.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TNamed.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RtypesCore.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfig.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RVersion.h \
   /usr/include/AvailabilityMacros.h /usr/include/TargetConditionals.h \
-  /Users/erezcohen/root6/root-6.04.10/include/DllImport.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Rtypeinfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/snprintf.h \
-  /Users/erezcohen/root6/root-6.04.10/include/strlcpy.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGenericClassInfo.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSchemaHelper.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVersionCheck.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Riosfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBuffer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TString.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMathBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/DllImport.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Rtypeinfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/snprintf.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/strlcpy.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGenericClassInfo.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSchemaHelper.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVersionCheck.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Riosfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBuffer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMathBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
   /usr/include/math.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RStringView.h \
-  /Users/erezcohen/root6/root-6.04.10/include/RConfigure.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RStringView.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/RConfigure.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/string_view \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/experimental/__config \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iomanip \
-  /Users/erezcohen/root6/root-6.04.10/include/TList.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSeqCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCollection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TIterator.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDatime.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUUID.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMap.h \
-  /Users/erezcohen/root6/root-6.04.10/include/THashTable.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TUrl.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TTree.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TBranch.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttFill.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDataType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TDictionary.h \
-  /Users/erezcohen/root6/root-6.04.10/include/ESTLType.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttLine.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttMarker.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayD.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArray.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TArrayI.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TClass.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TObjString.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TList.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSeqCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCollection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TIterator.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDatime.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUUID.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMap.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/THashTable.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TUrl.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TTree.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TBranch.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttFill.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDataType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TDictionary.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ESTLType.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttLine.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttMarker.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayD.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArray.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TArrayI.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TClass.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TObjString.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__hash_table \
-  /Users/erezcohen/root6/root-6.04.10/include/ThreadLocalStorage.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualTreePlayer.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector3.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TError.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVector2.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrix.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixF.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixT.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTBase.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixDBasefwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVectorDfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixTUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtils.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMatrixFUtilsfwd.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TMath.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include/float.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/ThreadLocalStorage.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualTreePlayer.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector3.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TError.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVector2.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrix.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixF.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixT.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTBase.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixDBasefwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVectorDfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixTUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtils.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMatrixFUtilsfwd.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TMath.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include/float.h \
   PandoraNuTrack.h /Users/erezcohen/larlite/core/LArUtil/Geometry.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilBase.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/sstream \
-  /Users/erezcohen/root6/root-6.04.10/include/TChain.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TChain.h \
   /Users/erezcohen/larlite/core/Base/Base-TypeDef.h \
   /Users/erezcohen/larlite/core/Base/DataFormatConstants.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TROOT.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TROOT.h \
   /Users/erezcohen/larlite/core/Base/FrameworkConstants.h \
   /Users/erezcohen/larlite/core/Base/GeoTypes.h \
   /Users/erezcohen/larlite/core/Base/larlite_base.h \
@@ -876,35 +886,35 @@ calcAnaTree.o: calcAnaTree.cxx calcAnaTree.h AnaTreeTools.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilConstants.h \
   /Users/erezcohen/larlite/core/Base/GeoConstants.h \
   /Users/erezcohen/larlite/core/LArUtil/LArUtilConfig.h MyLArTools.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TGraph.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TFitResultPtr.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TSpline.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttPad.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualX.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttText.h \
-  /Users/erezcohen/root6/root-6.04.10/include/GuiTypes.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Buttons.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObject.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQObjectEmitVA.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TQConnection.h \
-  /Users/erezcohen/root6/root-6.04.10/include/Varargs.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TInterpreter.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TVirtualMutex.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttBBox2D.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TPoint.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TAttCanvas.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TCanvasImp.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TGraph.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TFitResultPtr.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TSpline.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttPad.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualX.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttText.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/GuiTypes.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Buttons.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObject.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQObjectEmitVA.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TQConnection.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/Varargs.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TInterpreter.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TVirtualMutex.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttBBox2D.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TPoint.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TAttCanvas.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TCanvasImp.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoAlgo.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoLine.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoHalfLine.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoVector.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoAlgoConstants.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoAlgoException.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TLorentzVector.h \
-  /Users/erezcohen/root6/root-6.04.10/include/TRotation.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TLorentzVector.h \
+  /usr/local/Cellar/root6/6.06.02/include/root/TRotation.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoLineSegment.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoTrajectory.h \
   /Users/erezcohen/larlite/UserDev/BasicTool/GeoAlgo/GeoCone.h \
