@@ -29,16 +29,16 @@ TrainingSample = "300000_tracks_MC_BNB"
 
 
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
-TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + "_AnalysisTrees.csv"
+TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + ".csv"
 model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/uboone/app/users/ecohen/") +"AnalysisTreesAna/GBDTmodels"
 
 
 # The features that we want to use for the GBDT
 feature_names = [
-                 'nhits','length','starty','startz','endy','endz','theta','phi', 'distlenratio',    # geometry
-                 'startdqdx','enddqdx','dqdxdiff','dqdxratio','totaldqdx','averagedqdx',            # calorimetry
-                 'cosmicscore','coscontscore','pidpida','pidchi'                                    # uboonecode tagging and PID
-                 'cfdistance'                                                                       # optical information - unused for open cosmic MC
+                 'nhits','length','starty','startz','endy','endz','theta','phi', 'distlenratio'    # geometry
+                 ,'startdqdx','enddqdx','dqdxdiff','dqdxratio','totaldqdx','averagedqdx'            # calorimetry
+                 ,'cosmicscore','coscontscore','pidpida','pidchi'                                    # uboonecode tagging and PID
+                 ,'cfdistance'                                                                       # optical information - unused for open cosmic MC
                  ]
 
 
