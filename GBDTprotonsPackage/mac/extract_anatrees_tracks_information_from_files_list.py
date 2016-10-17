@@ -3,7 +3,7 @@
     ----------
     python $macGBDTprotons/extract_anatrees_tracks_information_from_files_list.py -wuboone --DataType=extBNB --files_frac=0.001 --evnts_frac=0.1 -v4 -p1
     
-    last edited: October 14, 2016 (Erez)
+    last edited: October 17, 2016 (Erez)
 '''
 
 import ROOT , os , sys, larlite, argparse
@@ -16,11 +16,11 @@ import input_flags
 flags = input_flags.get_args()
 
 
-Path            = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna"    if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
+Path            = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
 ListsPath       = Path+"/lists/AnalysisTreesLists"
 AnaPath         = Path+"/BDTanaFiles"
 CSVFilesPath    = Path+"/FeaturesFiles"
-ListName        = flags.DataType + "_AnalysisTrees" # options: openCOSMIC_MC / extBNB / MC_BNB / BNB (not yet??)
+ListName        = flags.DataType + "_AnalysisTrees" # options: openCOSMIC_MC / extBNB / MC_BNB / BNB_5e19POT
 MCmode          = True if 'MC' in flags.DataType else False
 tools           = AnaTreeTools()
 
