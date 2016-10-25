@@ -1,79 +1,33 @@
 '''
     usage:
     ---------
-    > python gbdt_training_predicting/plot_gdbt_scores_distribution.py -werez
+    python gbdt_training_predicting/plot_gdbt_scores_distribution.py -werez
 '''
-
-import ROOT ,os, sys , math
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-import pylab
-import matplotlib.ticker as ticker
-from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
-from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-from mpl_toolkits.axes_grid1.inset_locator import inset_axes
-
-sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
-import input_flags
-flags = input_flags.get_args()
+from definitions import *
 
 
 N = 1000 # number of efficiency vs. score points
 
-ModelName   = "cosmic_trained_only_on_mc"
 
-
-
-
-Path            = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
-
-if flags.verbose>4: # just a small sample for flags.verboseing
-
-    ListName    = "small_20_files_extBNB_AnalysisTrees"
-    ModelName   = "CORSIKAtraining"
-    GBDTScoresFileName = Path+"/PassedGBDTFiles/"+ListName+"_"+ModelName+"/passedGBDT_"+ListName+"_"+ModelName+"_allscores.csv"
-    data        = pd.read_csv(GBDTScoresFileName,sep=' ',names=['run','subrun','event','trackid'
-                                                         ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
-                                                         ,'V_start_wire','V_end_wire','V_start_time','V_end_time'
-                                                        ,'Y_start_wire','Y_end_wire','Y_start_time','Y_end_time'
-                                                         ,'score' ])
-else:
-
-    ListName    = "extBNB_AnalysisTrees"
-    GBDTScoresFileName = Path+"/PassedGBDTFiles/"+ListName+"_"+ModelName+"/passedGBDT_"+ListName+"_"+ModelName+"_allscores.csv"
-#    data        = pd.read_csv(GBDTScoresFileName,sep=',')
-    data        = pd.read_csv(GBDTScoresFileName,sep=' ',names=['run','subrun','event','trackid'
-                                                            ,'U_start_wire','U_end_wire','U_start_time','U_end_time'
-                                                            ,'V_start_wire','V_end_wire','V_start_time','V_end_time'
-                                                            ,'Y_start_wire','Y_end_wire','Y_start_time','Y_end_time'
-                                                            ,'score' ])
-
-
-
-
-print "from \n" + GBDTScoresFileName
+#Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
+#PassedGBDTOnlyFilter= Path+"/PassedGBDTFiles" + "/" +ModelName + "/" + "passedGBDT_"+ListName+"_"+ModelName+"_allscores_only_rse.csv"
+data = pd.read_csv( PassedGBDTAllScores )
+print "from \n" + PassedGBDTAllScores
 print "loaded %d tracks "%len(data)
 if flags.verbose>1: print data
 
 NtracksTot = len(data)
-score = []
-purity = []
-Ntracks = []
+score , purity , Ntracks = [] , [] , []
 
 # loop to get purity. vs. score
 for i in range(N):
 
     score.append(float(i)/N)
     #    purity.append(float(i)/N)
-
-    data_pass = data[data.score > score[i]]
-
+    data_pass = data[data.p_score > score[i]]
     purity.append(float(len(data_pass))/len(data))
     Ntracks.append(len(data_pass))
-    
-    if flags.verbose>6: print "purity for score %.2f is %.4f (left w/ %d tracks out of %d)"%(score[i],purity[i],len(data_pass),len(data))
-    
+    if flags.verbose>6: print "purity for score %.3f is %.4f (left w/ %d tracks out of %d)"%(score[i],purity[i],len(data_pass),len(data))
     if flags.verbose>0 and N>10:
         if (i%(N/10)==0): print "[%.0f%%]"%(100.*float(i)/N)
 
@@ -86,7 +40,7 @@ fig, ax = plt.subplots()
 fig1 = fig.add_subplot(111)
 pylab.title("proton GBDT classification", fontsize=18)
 pylab.plot( score , purity , 'w')
-pylab.xlabel(r'score', fontsize=22)
+pylab.xlabel(r'p-score', fontsize=22)
 
 # yticks on left
 locs,labels = pylab.yticks()

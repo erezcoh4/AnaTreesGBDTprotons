@@ -4,33 +4,16 @@
     python gbdt_training_predicting/train_gbdt_cross_validation.py -werez -v1
 '''
 
-import ROOT ,os, sys , math , time
-import matplotlib.pyplot as plt
-import pandas as pd
-sys.path.insert(0, '../../protonid')
-import boost_cosmic
-sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
-import input_flags
-flags = input_flags.get_args()
-
-
-
-
-'''
-    application on beam-off data, training on cosmic MC
-    ----------------------------------------------------
-    ModelName = "cosmic_trained_only_on_mc"
-    TrainingSample = "200000_tracks_openCOSMIC_MC"
-
-    application on beam-on data, training only on MC-BNB
-    ----------------------------------------------------
-    ModelName = "BNB_TrainedOn_only_MC_BNB"
-    TrainingSample = "300000_tracks_MC_BNB"
-
-'''
-
-ModelName = "BNB_TrainedOn_only_MC_BNB" # ToDo: Change this to add training on cosmic-data as 'bad' signal as well
-TrainingSample = "300000_tracks_MC_BNB"
+#import ROOT ,os, sys , math , time
+#import matplotlib.pyplot as plt
+#import pandas as pd
+#sys.path.insert(0, '../../protonid')
+#import boost_cosmic
+#sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
+#import input_flags
+#flags = input_flags.get_args()
+#from prompter import yesno
+from definitions import *
 
 
 
@@ -62,8 +45,9 @@ param['Nfolds']             = 10     # Kat: 10
 
 
 
-AskCrossValidation = int(input("cross validate model? \n( yes-1 / no-0 ):\n > "))
-DoCrossValidation = True if AskCrossValidation==1 else False
+#AskCrossValidation = int(input("cross validate model? \n( yes-1 / no-0 ):\n > "))
+#DoCrossValidation = True if AskCrossValidation==1 else False
+DoCrossValidation = yesno('cross validate?')
 
 
 # (A) load the data
@@ -179,7 +163,6 @@ else:
 
 print "see \n" + model_path + "/README_" + ModelName
 print "and \n" + model_path + "/importances_" + ModelName + ".pdf"
-print model_path + "/importances_" + ModelName + ".pdf"
 
 
 

@@ -3,13 +3,13 @@
     ---------
     python gbdt_training_predicting/divide_training_and_testing_samples.py -werez -v1
 '''
-
-import sys
-import pandas as pd
-import random
-sys.path.insert(0, '/Users/erezcohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
-import input_flags
-flags = input_flags.get_args()
+#import sys
+#import pandas as pd
+#import random
+#sys.path.insert(0, '/Users/erezcohen/larlite/UserDev/mySoftware/MySoftwarePackage/mac')
+#import input_flags
+#flags = input_flags.get_args()
+from definitions import *
 
 
 

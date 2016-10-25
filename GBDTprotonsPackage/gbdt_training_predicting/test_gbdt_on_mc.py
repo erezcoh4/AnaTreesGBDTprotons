@@ -18,25 +18,8 @@ sys.path.insert(0, '../../mySoftware/MySoftwarePackage/mac')
 import input_flags
 flags = input_flags.get_args()
 from prompter import yesno
+from definitions import *
 
-
-
-'''
-
-    application on beam-off data, training on cosmic MC
-    ----------------------------------------------------
-    ModelName = "cosmic_trained_only_on_mc"
-    TestSample = "55650_tracks_openCOSMIC_MC_AnalysisTrees"
-
-    application on beam-on data, training only on MC-BNB
-    ----------------------------------------------------
-    ModelName = "BNB_TrainedOn_only_MC_BNB"
-    TestSample = "87789_tracks_MC_BNB"
-
-'''
-
-ModelName = "BNB_TrainedOn_only_MC_BNB" # ToDo: Change this to add training on cosmic-data as 'bad' signal as well
-TestSample = "87789_tracks_MC_BNB"
 
 
 Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
@@ -62,7 +45,6 @@ if (DoPredict):
 
     # (B) predict on the MC data
     # ---------------------------------------
-    from definitions import feature_names
     print "feature_names: ",feature_names
     data_scores = predict_cosmic.predict_data( data , model_path + "/" + ModelName + ".bst" , feature_names )
     # now dump the run and event number to csv to use as input to larsoft filter
@@ -95,7 +77,7 @@ titl_others = [ r'-9999', r'$\mu^{\pm}$', r'$\pi^{\pm,0}$'  , r'e$^{\pm}$/$\gamm
 # (C) plot scores vs. actual mc code
 # ---------------------------------------
 bins = np.linspace(0, 1, 100)
-plt.figure()
+plt.figure(figsize=[15,15])
 for i in range(len(data_others)):
     
     plt.subplot(2,2,i+1)
