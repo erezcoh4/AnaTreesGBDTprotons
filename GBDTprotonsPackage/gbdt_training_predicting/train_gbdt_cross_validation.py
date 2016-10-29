@@ -17,11 +17,10 @@ from definitions import *
 
 
 
-Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
+#Path = "/Users/erezcohen/Desktop/uBoone/AnalysisTreesAna" if flags.worker=="erez" else "/uboone/app/users/ecohen/AnalysisTreesAna"
 TrainingSampleName = Path+"/TrainingSamples/trainsample_" + TrainingSample + ".csv"
-model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/uboone/app/users/ecohen/") +"AnalysisTreesAna/GBDTmodels"
-
-from definitions import feature_names
+#model_path = ("/Users/erezcohen/Desktop/uBoone/" if flags.worker=="erez" else "/uboone/app/users/ecohen/") +"AnalysisTreesAna/GBDTmodels"
+#from definitions import feature_names
 
 param = {}
 param['debug']              = flags.verbose     # just for monitoring....

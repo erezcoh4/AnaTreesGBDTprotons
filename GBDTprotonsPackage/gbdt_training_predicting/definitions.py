@@ -31,13 +31,17 @@ feature_names = [
                  ,'cfdistance'                                                                       # optical information - unused for open cosmic MC
                  ]
 
-features_names_only_scores = [
-                              'run','subrun','event','trackid'
-                              ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
-                              ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
-                              ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
-                              ,'p_score'
-                              ]
+features_scores_roi = [
+                       'run','subrun','event','trackid'
+                        ,'U_start_wire','U_start_time','U_end_wire','U_end_time'
+                        ,'V_start_wire','V_start_time','V_end_wire','V_end_time'
+                        ,'Y_start_wire','Y_start_time','Y_end_wire','Y_end_time'
+                        ,'p_score'
+                        ]
+
+features_only_scores = [
+                        'run','subrun','event','trackid','p_score'
+                        ]
 
 '''
     
@@ -88,6 +92,7 @@ elif flags.worker=="uboone":
 
 
 model_path = Path + "/GBDTmodels"
+dirname    = Path+"/PassedGBDTFiles/"+ModelName
 
 
 

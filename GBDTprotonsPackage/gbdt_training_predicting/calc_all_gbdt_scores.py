@@ -5,10 +5,10 @@
 '''
 from definitions import *
 
-SampleFileName      = Path + "/FeaturesFiles/features_" + ListName + ".csv"
+SampleFileName = Path + "/FeaturesFiles/features_" + ListName + ".csv"
 
 # create a directory for the BDT model
-dirname = Path+"/PassedGBDTFiles/"+ModelName
+#dirname = Path+"/PassedGBDTFiles/"+ModelName
 try:
     os.makedirs( dirname )
 except OSError, e:
@@ -30,6 +30,6 @@ data_scores.to_csv( PassedGBDTScoresFeatures , header=True )
 print "wrote csv file of all features and all scores:\n" + PassedGBDTScoresFeatures
 
 # run/sub/event - input to larsoft filter, or for plotting the p-score vs. number of classified tracks
-data_scores[ features_names_only_scores ].to_csv( PassedGBDTAllScores , header=True )
+data_scores[ features_scores_roi ].to_csv( PassedGBDTAllScores , header=True )
 
 print "wrote csv file of only r/s/e and all scores:\n" + PassedGBDTAllScores
