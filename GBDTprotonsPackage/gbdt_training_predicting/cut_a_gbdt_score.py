@@ -7,8 +7,9 @@ from definitions import *
 
 score = 0.99
 
-PassedGBDTFileName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ModelName+ "/" + "passedGBDT_"+ListName+"_"+ModelName+"_score_%.2f.csv"%score
-PassedGBDTFileROIName = Path+"/PassedGBDTFiles" + "/" +ListName +"_"+ModelName+ "/" + "passedGBDT_"+ListName+"_"+ModelName+"_score_%.2f_roi.csv"%score
+name = ListName +"_"+ModelName
+PassedGBDTFileName = passedGBDTpath + "/" + name + "/" + "passedGBDT_" + name + "_score_%.2f.csv"%score
+PassedGBDTFileROIName = passedGBDTpath + "/" + name + "/" + "passedGBDT_" + name +"_score_%.2f_roi.csv"%score
 
 #data = pd.read_csv(GBDTScoresFileName,sep=',') # file got from Katherine has ROIs start/end reversed
 data = pd.read_csv( PassedGBDTAllScores )
@@ -30,5 +31,5 @@ if flags.verbose>0: print "purity for score %.2f is %.4f (left w/ %d tracks out 
 # use only the relevant variables (the ones that we actually need for later)
 data_pass[ features_only_scores ].to_csv( PassedGBDTFileName , sep=' ' , header=False , index=False )
 data_pass[ features_scores_roi ].to_csv( PassedGBDTFileROIName , sep=' ' , header=False , index=False )
-print "written csv file:\n" + PassedGBDTFileName
-print "written csv file:\n" + PassedGBDTFileROIName
+print_filename( PassedGBDTFileName , "only R/S/E & scores written to file" )
+print_filename( PassedGBDTFileROIName , "only R/S/E, ROIs and scores written to file" )
